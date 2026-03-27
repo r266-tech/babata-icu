@@ -1,6 +1,32 @@
 {
+  "version": 1,
   "date": "2026-03-27",
-  "title": "X 每日简报 — 2026-03-27",
-  "content": "**GPT-5.4 Turbo-128K 登顶 Arena (1508 Elo)**\n\nOpenAI 的 GPT-5.4 在 Arena 排行榜上以 1508 Elo 登顶，成为新的最强模型。\n\n**Qwen3-VL 235B 发布**\n\n阿里发布 Qwen3-VL 235B，视觉语言模型新标杆。\n\n**nano-bench 2.0 — 低成本 Agent 测试 ($1.50/35min)**\n\n社区工具 nano-bench 2.0 发布，支持低成本高频 agent 测试。",
-  "wisdom": "• 非头部团队开始崛起，技术壁垒在降低\n• 关系比较 > 直接询问 (relational elicitation)\n• 药丸测试 — 简单但有效的 agent 行为检测\n• 边缘 AI — 1B 模型本地跑，设备端推理趋势加速"
+  "generated_at": "2026-03-27T10:00:00+08:00",
+  "stats": {
+    "tweet_count": 669,
+    "timespan": "16.7h",
+    "sources": ["following", "foryou"]
+  },
+  "briefing": {
+    "highlights": [
+      "GPT-5.4 Turbo-128K 登顶 Arena (1508 Elo)",
+      "Qwen3-VL 235B 发布",
+      "nano-bench 2.0: 低成本 agent 测试 ($1.50/35min)"
+    ],
+    "articles": [
+      {"title": "GPT-5.4 Turbo-128K 登顶 Arena", "summary": "OpenAI 新模型在 Arena 排行榜上以 1508 Elo 登顶", "url": "https://x.com/...", "tag": "模型"},
+      {"title": "Qwen3-VL 235B 发布", "summary": "阿里发布 Qwen3 视觉语言模型，235B 参数", "url": "https://x.com/...", "tag": "模型"}
+    ]
+  },
+  "wisdom": {
+    "insights": [
+      "非头部团队崛起：开源模型开始超越闭源头部",
+      "关系比较 > 直接询问：prompt 技巧新发现",
+      "药丸测试：用微型 benchmark 快速评估模型",
+      "边缘 AI：本地小模型正在成为主流"
+    ]
+  },
+  "tools": [
+    {"name": "nano-bench 2.0", "description": "低成本高频 agent 测试框架", "url": "https://github.com/..."}
+  ]
 }

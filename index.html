@@ -3,341 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 资讯 · 每日简报</title>
-<meta name="description" content="AI 资讯每日简报 — GPT-5.4 登顶 Arena, Qwen3-VL 发布, ARC-AGI-3, Claude Code Auto Mode 等最新 AI 动态。">
+<title>AI 资讯 · 2026-03-27</title>
+<meta name="description" content="AI 资讯每日简报 — 669 条推文，16.7h 跨度。">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --border: #222;
-    --text: #e0e0e0;
-    --text-dim: #888;
-    --accent: #f0c040;
-    --accent-dim: rgba(240, 192, 64, 0.15);
-    --max-w: 860px;
-    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-    --mono: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-  }
-
-  html { font-size: 16px; -webkit-font-smoothing: antialiased; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  /* ── Layout ── */
-  .container {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 0 1.25rem;
-  }
-
-  /* ── Header ── */
-  header {
-    border-bottom: 1px solid var(--border);
-    padding: 2.5rem 0 1.5rem;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  .site-title span { color: var(--accent); }
-
-  .site-subtitle {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
-  }
-
-  /* ── Main content ── */
-  main {
-    padding: 2.5rem 0;
-  }
-
-  .briefing-date {
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.5rem;
-  }
-
-  .briefing-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-    color: var(--accent);
-  }
-
-  .briefing-content {
-    white-space: pre-wrap;
-    word-break: break-word;
-    line-height: 1.85;
-    font-size: 1rem;
-    color: var(--text);
-  }
-
-  .briefing-content strong,
-  .briefing-content b {
-    color: #fff;
-    font-weight: 600;
-  }
-
-  .wisdom-section {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .wisdom-section h3 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-  }
-
-  .wisdom-content {
-    white-space: pre-wrap;
-    word-break: break-word;
-    font-size: 0.92rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-  }
-
-  /* ── Archive sidebar ── */
-  .archive {
-    border-top: 1px solid var(--border);
-    padding: 2rem 0 3rem;
-  }
-
-  .archive h2 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-dim);
-    margin-bottom: 1rem;
-  }
-
-  .archive-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .archive-item {
-    display: block;
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    color: var(--text);
-    transition: background 0.15s, border-color 0.15s;
-    border: 1px solid transparent;
-    cursor: pointer;
-  }
-
-  .archive-item:hover {
-    background: var(--accent-dim);
-    border-color: rgba(240, 192, 64, 0.2);
-  }
-
-  .archive-item.active {
-    background: var(--accent-dim);
-    border-color: var(--accent);
-  }
-
-  .archive-date {
-    font-size: 0.78rem;
-    color: var(--accent);
-    font-family: var(--mono);
-    margin-bottom: 0.2rem;
-  }
-
-  .archive-title {
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .archive-summary {
-    font-size: 0.82rem;
-    color: var(--text-dim);
-    margin-top: 0.2rem;
-  }
-
-  /* ── Footer ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 0.78rem;
-    color: var(--text-dim);
-  }
-
-  /* ── Loading / Error ── */
-  .loading {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    padding: 3rem 0;
-  }
-
-  .error {
-    color: #e55;
-    font-size: 0.9rem;
-    padding: 2rem 0;
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 600px) {
-    .briefing-title { font-size: 1.3rem; }
-    .briefing-content { font-size: 0.95rem; }
-    .container { padding: 0 1rem; }
-    header { padding: 1.75rem 0 1rem; }
-    main { padding: 1.5rem 0; }
-  }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#141414;--border:#222;--text:#e0e0e0;--text-dim:#888;--accent:#f0c040;--accent-dim:rgba(240,192,64,.15);--max-w:860px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+body{background:var(--bg);color:var(--text);font:16px/1.7 var(--font);min-height:100vh}
+.container{max-width:var(--max-w);margin:0 auto;padding:2rem 1.5rem}
+header{text-align:center;padding:3rem 0 2rem;border-bottom:1px solid var(--border);margin-bottom:2rem}
+header h1{font-size:1.5rem;font-weight:600;letter-spacing:.05em;color:var(--accent);margin-bottom:.5rem}
+header .meta{color:var(--text-dim);font-size:.9rem}
+header .meta .dot{margin:0 .6rem;opacity:.4}
+section{margin-bottom:2.5rem}
+h2{font-size:1.15rem;font-weight:600;color:var(--accent);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);letter-spacing:.03em}
+.highlight,.insight,.tool{padding:.75rem 1rem;margin-bottom:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;font-size:.95rem;line-height:1.6}
+.card{padding:1rem 1.25rem;margin-bottom:.75rem;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:.4rem}
+.card h3 a{color:var(--text);text-decoration:none}
+.card h3 a:hover{color:var(--accent)}
+.card p{color:var(--text-dim);font-size:.9rem;line-height:1.5}
+.tag{display:inline-block;font-size:.75rem;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:3px;margin-bottom:.4rem}
+.tool a{color:var(--accent);text-decoration:none}
+footer{text-align:center;padding:2rem 0;color:var(--text-dim);font-size:.8rem;border-top:1px solid var(--border)}
 </style>
 </head>
 <body>
-
 <div class="container">
-  <header>
-    <div class="site-title">AI <span>资讯</span></div>
-    <div class="site-subtitle">每日简报 · Daily Briefing</div>
-  </header>
-
-  <main id="main">
-    <div class="loading">加载中…</div>
-  </main>
-
-  <section class="archive">
-    <h2>历史简报</h2>
-    <ul class="archive-list" id="archive">
-      <li class="loading">加载中…</li>
-    </ul>
-  </section>
-
-  <footer>babata.icu · AI 资讯聚合</footer>
+<header>
+<h1>AI 资讯 · 每日简报</h1>
+<div class="meta">
+2026-03-27
+<span class="dot">·</span>
+669 条推文
+<span class="dot">·</span>
+16.7h 跨度
 </div>
+</header>
 
-<script>
-(function() {
-  const main = document.getElementById('main');
-  const archiveList = document.getElementById('archive');
-  let activeItem = null;
-  let briefings = [];
+<section>
+<h2>📌 今日看点</h2>
+<div class="highlight">GPT-5.4 Turbo-128K 登顶 Arena (1508 Elo)</div>
+<div class="highlight">Qwen3-VL 235B 发布</div>
+<div class="highlight">nano-bench 2.0: 低成本 agent 测试 ($1.50/35min)</div>
 
-  // ── Markdown-lite: bold only ──
-  function renderText(text) {
-    if (!text) return '';
-    return text
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\n/g, '\n'); // preserve newlines via pre-wrap
-  }
+</section>
 
-  // ── Render a briefing in the main area ──
-  function renderBriefing(data, dateStr) {
-    const date = dateStr || data.date;
-    main.innerHTML = `
-      <div class="briefing-date">${date}</div>
-      <h1 class="briefing-title">${data.title || ''}</h1>
-      <div class="briefing-content">${renderText(data.content)}</div>
-      ${data.wisdom ? `
-        <div class="wisdom-section">
-          <h3>💡 Insights</h3>
-          <div class="wisdom-content">${renderText(data.wisdom)}</div>
-        </div>
-      ` : ''}
-    `;
-    document.title = `AI 资讯 · ${data.title || date}`;
-  }
+<section>
+<h2>📰 精选资讯</h2>
+<article class="card">
+<h3><a href="https://x.com/..." target="_blank">GPT-5.4 Turbo-128K 登顶 Arena</a></h3>
+<span class="tag">模型</span>
+<p>OpenAI 新模型在 Arena 排行榜上以 1508 Elo 登顶</p>
+</article>
+<article class="card">
+<h3><a href="https://x.com/..." target="_blank">Qwen3-VL 235B 发布</a></h3>
+<span class="tag">模型</span>
+<p>阿里发布 Qwen3 视觉语言模型，235B 参数</p>
+</article>
 
-  // ── Render archive list ──
-  function renderArchive(data) {
-    archiveList.innerHTML = '';
-    data.forEach((item, i) => {
-      const li = document.createElement('li');
-      li.className = 'archive-item';
-      li.setAttribute('data-date', item.date);
-      li.innerHTML = `
-        <div class="archive-date">${item.date}</div>
-        <div class="archive-title">${item.title}</div>
-        ${item.summary ? `<div class="archive-summary">${item.summary}</div>` : ''}
-      `;
-      li.addEventListener('click', () => loadBriefing(item.date, li));
-      archiveList.appendChild(li);
-      if (i === 0) activeItem = li;
-    });
-    if (activeItem) activeItem.classList.add('active');
-  }
+</section>
 
-  // ── Fetch and display a specific day ──
-  async function loadBriefing(date, li) {
-    // Update active state
-    if (activeItem) activeItem.classList.remove('active');
-    activeItem = li;
-    activeItem.classList.add('active');
+<section>
+<h2>💡 智慧提取</h2>
+<div class="insight">非头部团队崛起：开源模型开始超越闭源头部</div>
+<div class="insight">关系比较 &gt; 直接询问：prompt 技巧新发现</div>
+<div class="insight">药丸测试：用微型 benchmark 快速评估模型</div>
+<div class="insight">边缘 AI：本地小模型正在成为主流</div>
 
-    main.innerHTML = '<div class="loading">加载中…</div>';
-    try {
-      const res = await fetch(`/data/${date}.json`);
-      if (!res.ok) throw new Error(`${res.status}`);
-      const data = await res.json();
-      renderBriefing(data, date);
-      main.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (e) {
-      main.innerHTML = `<div class="error">无法加载 ${date} 的简报 (${e.message})</div>`;
-    }
-  }
+</section>
 
-  // ── Init ──
-  async function init() {
-    try {
-      const res = await fetch('/data/briefings.json');
-      if (!res.ok) throw new Error(`${res.status}`);
-      briefings = await res.json();
+<section>
+<h2>🔧 工具发现</h2>
+<div class="tool"><a href="https://github.com/..." target="_blank">nano-bench 2.0</a> — 低成本高频 agent 测试框架</div>
 
-      if (!briefings.length) {
-        main.innerHTML = '<div class="error">暂无简报</div>';
-        archiveList.innerHTML = '';
-        return;
-      }
+</section>
 
-      renderArchive(briefings);
-
-      // Load latest
-      const latest = briefings[0].date;
-      const resLatest = await fetch(`/data/${latest}.json`);
-      if (resLatest.ok) {
-        const data = await resLatest.json();
-        renderBriefing(data, latest);
-      } else {
-        // Fallback to archive entry data
-        renderBriefing({
-          date: briefings[0].date,
-          title: briefings[0].title,
-          content: briefings[0].summary,
-          wisdom: ''
-        });
-      }
-    } catch (e) {
-      main.innerHTML = `<div class="error">加载失败: ${e.message}</div>`;
-      archiveList.innerHTML = '';
-    }
-  }
-
-  init();
-})();
-</script>
-
+<footer>
+AI 资讯 · 由 巴巴塔 自动生成 · 2026-03-27
+</footer>
+</div>
 </body>
 </html>
