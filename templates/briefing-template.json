@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "date": "YYYY-MM-DD",
+  "generated_at": "ISO_TIMESTAMP",
+  "stats": {
+    "tweet_count": 0,
+    "timespan": "0h",
+    "sources": ["following", "foryou"]
+  },
+  "briefing": {
+    "highlights": [],
+    "articles": []
+  },
+  "wisdom": {
+    "insights": []
+  },
+  "tools": []
+}
