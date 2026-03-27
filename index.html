@@ -3,130 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 资讯 · 2026-03-27</title>
-<meta name="description" content="AI 资讯每日简报 — 722 条推文，24.0h 跨度。">
+<title>X 每日精华 | 2026-03-27</title>
+<meta name="description" content="X 每日精华 — 722 条推文，24.0h 跨度。">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--surface:#141414;--border:#222;--text:#e0e0e0;--text-dim:#888;--accent:#f0c040;--accent-dim:rgba(240,192,64,.15);--max-w:860px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
-body{background:var(--bg);color:var(--text);font:16px/1.7 var(--font);min-height:100vh}
-.container{max-width:var(--max-w);margin:0 auto;padding:2rem 1.5rem}
-header{text-align:center;padding:3rem 0 2rem;border-bottom:1px solid var(--border);margin-bottom:2rem}
-header h1{font-size:1.5rem;font-weight:600;letter-spacing:.05em;color:var(--accent);margin-bottom:.5rem}
-header .meta{color:var(--text-dim);font-size:.9rem}
-header .meta .dot{margin:0 .6rem;opacity:.4}
-section{margin-bottom:2.5rem}
-h2{font-size:1.15rem;font-weight:600;color:var(--accent);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);letter-spacing:.03em}
-.highlight,.insight,.tool{padding:.75rem 1rem;margin-bottom:.5rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;font-size:.95rem;line-height:1.6}
-.card{padding:1rem 1.25rem;margin-bottom:.75rem;background:var(--surface);border:1px solid var(--border);border-radius:8px}
-.card h3{font-size:1rem;font-weight:600;margin-bottom:.4rem}
-.card h3 a{color:var(--text);text-decoration:none}
-.card h3 a:hover{color:var(--accent)}
-.card p{color:var(--text-dim);font-size:.9rem;line-height:1.5}
-.tag{display:inline-block;font-size:.75rem;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:3px;margin-bottom:.4rem}
-.tool a{color:var(--accent);text-decoration:none}
-footer{text-align:center;padding:2rem 0;color:var(--text-dim);font-size:.8rem;border-top:1px solid var(--border)}
+:root{
+  --bg:#0a0a0a;
+  --surface:#111;
+  --surface-hover:#181818;
+  --border:#1e1e1e;
+  --text:#e0e0e0;
+  --text-dim:#999;
+  --accent:#f0c040;
+  --accent-bg:rgba(240,192,64,.12);
+  --red:#ff6b6b;
+  --blue:#6bcbff;
+  --purple:#dda0dd;
+  --max-w:820px;
+  --font:-apple-system,BlinkMacSystemFont,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.75 var(--font);min-height:100vh;-webkit-font-smoothing:antialiased}
+
+/* ── Container ── */
+.container{max-width:var(--max-w);margin:0 auto;padding:2rem 1.5rem 3rem}
+
+/* ── Header ── */
+header{text-align:center;padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--border);margin-bottom:2.5rem}
+header h1{font-size:1.6rem;font-weight:700;letter-spacing:.04em;color:var(--accent);margin-bottom:.6rem}
+header .meta{color:var(--text-dim);font-size:.88rem;letter-spacing:.02em}
+header .meta .sep{margin:0 .5rem;opacity:.35}
+
+/* ── Section titles ── */
+section{margin-bottom:2.8rem}
+.section-title{font-size:1.12rem;font-weight:700;margin-bottom:1.1rem;padding-bottom:.55rem;border-bottom:1px solid var(--border);letter-spacing:.03em}
+.highlights-title{color:var(--red)}
+.articles-title{color:var(--blue)}
+.wisdom-title{color:var(--purple)}
+.tools-title{color:var(--blue)}
+
+/* ── Links ── */
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted transparent;transition:all .2s}
+a:hover{color:#fff;border-bottom-color:var(--accent)}
+
+/* ── Highlights ── */
+.highlight{padding:.8rem 1.1rem;margin-bottom:.55rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:.95rem;line-height:1.65;color:var(--text)}
+
+/* ── Article cards ── */
+.card{padding:1.1rem 1.3rem;margin-bottom:.6rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:background .2s}
+.card:hover{background:var(--surface-hover)}
+.card h3{font-size:1.02rem;font-weight:600;margin-bottom:.35rem;line-height:1.45}
+.card h3 a{color:var(--accent)}
+.card h3 a:hover{color:#fff}
+.card p{color:var(--text-dim);font-size:.88rem;line-height:1.6;margin-top:.3rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:500;color:var(--accent);background:var(--accent-bg);padding:2px 9px;border-radius:4px;margin-bottom:.35rem;letter-spacing:.02em}
+
+/* ── Divider ── */
+.divider{text-align:center;color:#333;font-size:.7rem;letter-spacing:.3em;padding:.15rem 0;user-select:none}
+
+/* ── Wisdom / Insights ── */
+.insight{padding:.75rem 1.1rem .75rem 1.3rem;margin-bottom:.55rem;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0}
+.insight p{color:#ccc;font-style:italic;font-size:.92rem;line-height:1.7}
+
+/* ── Tools ── */
+.tools-list{display:flex;flex-direction:column;gap:.5rem}
+.tool{padding:.7rem 1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:.92rem;line-height:1.55}
+.tool a{color:var(--accent);font-weight:600}
+.tool a:hover{color:#fff}
+.tool-desc{color:var(--text-dim)}
+
+/* ── Footer ── */
+footer{text-align:center;padding:2.5rem 0 1rem;color:var(--text-dim);font-size:.78rem;border-top:1px solid var(--border);letter-spacing:.02em}
+
+/* ── Responsive ── */
+@media(max-width:600px){
+  .container{padding:1.2rem 1rem 2rem}
+  header h1{font-size:1.3rem}
+  .card{padding:.9rem 1rem}
+}
 </style>
 </head>
 <body>
 <div class="container">
+
 <header>
-<h1>AI 资讯 · 每日简报</h1>
-<div class="meta">
-2026-03-27
-<span class="dot">·</span>
-722 条推文
-<span class="dot">·</span>
-24.0h 跨度
-</div>
+  <h1>X 每日精华 | 2026-03-27</h1>
+  <div class="meta">722 条推文 <span class="sep">·</span> 24.0h 跨度</div>
 </header>
 
 <section>
-<h2>📌 今日看点</h2>
-<div class="highlight">Claude Mythos 泄露：Anthropic CMS 配置失误曝光史上最强模型，网络安全能力远超一切</div>
-<div class="highlight">Chollet 投下炸弹：AGI 会自己做 Harness，否则就不是 AGI。Elon 回复 True</div>
-<div class="highlight">钉钉 CLI 开源：国内首个面向 AI Agent 开源全产品能力的国民级应用</div>
-<div class="highlight">RLHF 正在破坏 AI 安全：对齐后模型丧失不确定性表达能力</div>
-<div class="highlight">Google Translate 耳机实时翻译登陆 iOS，任意耳机可用 70+ 语言</div>
-
+  <h2 class="section-title highlights-title">🔥 今日看点</h2>
+    <div class="highlight">Claude Mythos 泄露：Anthropic CMS 配置失误曝光史上最强模型，网络安全能力远超一切</div>
+    <div class="highlight">Chollet 投下炸弹：AGI 会自己做 Harness，否则就不是 AGI。Elon 回复 True</div>
+    <div class="highlight">钉钉 CLI 开源：国内首个面向 AI Agent 开源全产品能力的国民级应用</div>
+    <div class="highlight">RLHF 正在破坏 AI 安全：对齐后模型丧失不确定性表达能力</div>
+    <div class="highlight">Google Translate 耳机实时翻译登陆 iOS，任意耳机可用 70+ 语言</div>
 </section>
 
 <section>
-<h2>📰 精选资讯</h2>
-<article class="card">
-<h3><a href="https://x.com/dotey/status/2037386855432286341" target="_blank">Claude Mythos 泄露：Anthropic 史上最强模型曝光</a></h3>
-<span class="tag">AI模型</span>
-<p>CMS 配置失误泄露近 3000 份文件。Claude Mythos(代号 Capybara)是 Opus 之上的第四档，在编程/推理/网安上大幅超越 Opus 4.6。Anthropic 选择先向安全防御机构开放。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/fchollet/status/2037380345436467541" target="_blank">Chollet: AGI 会自己做 Harness</a></h3>
-<span class="tag">AI观点</span>
-<p>只要还需要人类工程师为每个新问题手工搭建 harness，AI 就不是通用的。Elon 回复 True。直接挑战当前 agent 生态叙事。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/xiaohu/status/2037533774175772773" target="_blank">钉钉 CLI 开源</a></h3>
-<span class="tag">开发工具</span>
-<p>一行命令调用钉钉全部产品能力，首批 10 项，原生支持 Claude Code 和 OpenClaw，结构化 JSON + Agent Skills + dry-run。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/rryssf/status/2037499613352247534" target="_blank">RLHF 破坏 AI 安全功能</a></h3>
-<span class="tag">AI安全</span>
-<p>DPO 对齐使模型在 40-79% 事实问题上丧失不确定性表达，单聚类率从基座 1% 飙到 28.5%，采样安全检测完全失效。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/dotey/status/2037388326529839508" target="_blank">OpenAI 一周砍三产品</a></h3>
-<span class="tag">行业动态</span>
-<p>Sora 关停(日推理成本$15M)、Instant Checkout 废弃(仅12家商户)、成人聊天搁置。IPO 前大扫除，估值目标 $8300 亿。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/gdb/status/2037348081684111623" target="_blank">Codex Plugins 正式发布</a></h3>
-<span class="tag">开发工具</span>
-<p>Skills+Apps+MCP 打包分发，内置 Slack/Figma/Notion 插件，CLI 一键安装。同时重置所有用户额度。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/xiaohu/status/2037390369688559911" target="_blank">Google Translate 耳机实时翻译</a></h3>
-<span class="tag">产品发布</span>
-<p>登陆 iOS，任意耳机可用，70+ 语言，基于 Gemini AI，非逐字翻译而是语义理解。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/xiaohu/status/2037437061637287964" target="_blank">Gemini 3.1 Flash Live</a></h3>
-<span class="tag">AI模型</span>
-<p>实时语音模型，延迟 0.96s，128K 上下文，90+ 语言，专为语音 Agent 设计。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/xiaohu/status/2037374896259645902" target="_blank">iOS 27 Siri 将支持第三方 AI</a></h3>
-<span class="tag">行业动态</span>
-<p>Bloomberg 报道苹果计划让 Siri 路由请求到 ChatGPT/Gemini/Claude 等第三方 AI 聊天机器人。</p>
-</article>
-<article class="card">
-<h3><a href="https://x.com/Khazix0918/status/2037424637802668481" target="_blank">中关村论坛圆桌深度对话</a></h3>
-<span class="tag">行业洞察</span>
-<p>杨植麟主持，张鹏/罗福莉/夏立雪/黄超讨论 OpenClaw、自进化、可持续 token、算力瓶颈。</p>
-</article>
-
+  <h2 class="section-title articles-title">📰 精选资讯</h2>
+    <article class="card">
+      <h3><a href="https://x.com/dotey/status/2037386855432286341" target="_blank" rel="noopener">Claude Mythos 泄露：Anthropic 史上最强模型曝光</a></h3>
+      <span class="tag">AI模型</span>
+      <p>CMS 配置失误泄露近 3000 份文件。Claude Mythos(代号 Capybara)是 Opus 之上的第四档，在编程/推理/网安上大幅超越 Opus 4.6。Anthropic 选择先向安全防御机构开放。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/fchollet/status/2037380345436467541" target="_blank" rel="noopener">Chollet: AGI 会自己做 Harness</a></h3>
+      <span class="tag">AI观点</span>
+      <p>只要还需要人类工程师为每个新问题手工搭建 harness，AI 就不是通用的。Elon 回复 True。直接挑战当前 agent 生态叙事。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/xiaohu/status/2037533774175772773" target="_blank" rel="noopener">钉钉 CLI 开源</a></h3>
+      <span class="tag">开发工具</span>
+      <p>一行命令调用钉钉全部产品能力，首批 10 项，原生支持 Claude Code 和 OpenClaw，结构化 JSON + Agent Skills + dry-run。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/rryssf/status/2037499613352247534" target="_blank" rel="noopener">RLHF 破坏 AI 安全功能</a></h3>
+      <span class="tag">AI安全</span>
+      <p>DPO 对齐使模型在 40-79% 事实问题上丧失不确定性表达，单聚类率从基座 1% 飙到 28.5%，采样安全检测完全失效。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/dotey/status/2037388326529839508" target="_blank" rel="noopener">OpenAI 一周砍三产品</a></h3>
+      <span class="tag">行业动态</span>
+      <p>Sora 关停(日推理成本$15M)、Instant Checkout 废弃(仅12家商户)、成人聊天搁置。IPO 前大扫除，估值目标 $8300 亿。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/gdb/status/2037348081684111623" target="_blank" rel="noopener">Codex Plugins 正式发布</a></h3>
+      <span class="tag">开发工具</span>
+      <p>Skills+Apps+MCP 打包分发，内置 Slack/Figma/Notion 插件，CLI 一键安装。同时重置所有用户额度。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/xiaohu/status/2037390369688559911" target="_blank" rel="noopener">Google Translate 耳机实时翻译</a></h3>
+      <span class="tag">产品发布</span>
+      <p>登陆 iOS，任意耳机可用，70+ 语言，基于 Gemini AI，非逐字翻译而是语义理解。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/xiaohu/status/2037437061637287964" target="_blank" rel="noopener">Gemini 3.1 Flash Live</a></h3>
+      <span class="tag">AI模型</span>
+      <p>实时语音模型，延迟 0.96s，128K 上下文，90+ 语言，专为语音 Agent 设计。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/xiaohu/status/2037374896259645902" target="_blank" rel="noopener">iOS 27 Siri 将支持第三方 AI</a></h3>
+      <span class="tag">行业动态</span>
+      <p>Bloomberg 报道苹果计划让 Siri 路由请求到 ChatGPT/Gemini/Claude 等第三方 AI 聊天机器人。</p>
+    </article>
+    <div class="divider">━━━━━━━━━━</div>
+    <article class="card">
+      <h3><a href="https://x.com/Khazix0918/status/2037424637802668481" target="_blank" rel="noopener">中关村论坛圆桌深度对话</a></h3>
+      <span class="tag">行业洞察</span>
+      <p>杨植麟主持，张鹏/罗福莉/夏立雪/黄超讨论 OpenClaw、自进化、可持续 token、算力瓶颈。</p>
+    </article>
 </section>
 
 <section>
-<h2>💡 智慧提取</h2>
-<div class="insight">AGI 会自己搭 Harness，否则不是 AGI — Chollet 提醒我们 harness 是桥梁不是终点</div>
-<div class="insight">感觉最可靠的模型，恰恰最可能悄悄犯错 — RLHF 对齐破坏不确定性表达</div>
-<div class="insight">软件从静态变弹性 — Sam Altman: 未来软件按需生成，为你量身定制</div>
-<div class="insight">脚本管事实，Agent 管思考 — Elvis Zoe: 确定性控制流 + 认知 agent = 可靠</div>
-<div class="insight">自进化是未来 12 个月关键词 — 中关村圆桌：算力→可持续token→生态→自进化</div>
-
+  <h2 class="section-title wisdom-title">💡 智慧提取</h2>
+    <div class="insight"><p>AGI 会自己搭 Harness，否则不是 AGI — Chollet 提醒我们 harness 是桥梁不是终点</p></div>
+    <div class="insight"><p>感觉最可靠的模型，恰恰最可能悄悄犯错 — RLHF 对齐破坏不确定性表达</p></div>
+    <div class="insight"><p>软件从静态变弹性 — Sam Altman: 未来软件按需生成，为你量身定制</p></div>
+    <div class="insight"><p>脚本管事实，Agent 管思考 — Elvis Zoe: 确定性控制流 + 认知 agent = 可靠</p></div>
+    <div class="insight"><p>自进化是未来 12 个月关键词 — 中关村圆桌：算力→可持续token→生态→自进化</p></div>
 </section>
 
 <section>
-<h2>🔧 工具发现</h2>
-<div class="tool"><a href="https://x.com/shaomeng/status/2037531573013410061" target="_blank">ByteRover Memory Plugin</a> — OpenClaw 三层记忆架构，检索准确率 92.2%，Git-like 状态化</div>
-<div class="tool"><a href="https://x.com/op7418/status/2037352649419620440" target="_blank">Cline Kanban</a> — 可视化管理 CLI Agent 任务，Worktree 隔离+依赖链</div>
-<div class="tool"><a href="https://x.com/vikingmute/status/2037503331539538294" target="_blank">clone-website skill</a> — 一命令克隆网站样式，Chrome MCP + 并行 sub agent</div>
-<div class="tool"><a href="https://x.com/xiaohu/status/2037533774175772773" target="_blank">DingTalk CLI</a> — 钉钉开源 CLI，Agent Native 接口，10 项核心能力</div>
-
+  <h2 class="section-title tools-title">🛠️ 工具发现</h2>
+  <div class="tools-list">
+    <div class="tool"><a href="https://x.com/shaomeng/status/2037531573013410061" target="_blank" rel="noopener">ByteRover Memory Plugin</a><span class="tool-desc"> — OpenClaw 三层记忆架构，检索准确率 92.2%，Git-like 状态化</span></div>
+    <div class="tool"><a href="https://x.com/op7418/status/2037352649419620440" target="_blank" rel="noopener">Cline Kanban</a><span class="tool-desc"> — 可视化管理 CLI Agent 任务，Worktree 隔离+依赖链</span></div>
+    <div class="tool"><a href="https://x.com/vikingmute/status/2037503331539538294" target="_blank" rel="noopener">clone-website skill</a><span class="tool-desc"> — 一命令克隆网站样式，Chrome MCP + 并行 sub agent</span></div>
+    <div class="tool"><a href="https://x.com/xiaohu/status/2037533774175772773" target="_blank" rel="noopener">DingTalk CLI</a><span class="tool-desc"> — 钉钉开源 CLI，Agent Native 接口，10 项核心能力</span></div>
+  </div>
 </section>
 
-<footer>
-AI 资讯 · 由 巴巴塔 自动生成 · 2026-03-27
-</footer>
+<footer>X 每日精华 · 巴巴塔自动生成 · 2026-03-27</footer>
+
 </div>
 </body>
 </html>
