@@ -1,0 +1,6 @@
+{
+  "date": "2026-03-27",
+  "title": "X 每日简报 — 2026-03-27",
+  "content": "**GPT-5.4 Turbo-128K 登顶 Arena (1508 Elo)**\n\nOpenAI 的 GPT-5.4 在 Arena 排行榜上以 1508 Elo 登顶，成为新的最强模型。\n\n**Qwen3-VL 235B 发布**\n\n阿里发布 Qwen3-VL 235B，视觉语言模型新标杆。\n\n**nano-bench 2.0 — 低成本 Agent 测试 ($1.50/35min)**\n\n社区工具 nano-bench 2.0 发布，支持低成本高频 agent 测试。",
+  "wisdom": "• 非头部团队开始崛起，技术壁垒在降低\n• 关系比较 > 直接询问 (relational elicitation)\n• 药丸测试 — 简单但有效的 agent 行为检测\n• 边缘 AI — 1B 模型本地跑，设备端推理趋势加速"
+}
