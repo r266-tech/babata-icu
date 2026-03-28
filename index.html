@@ -221,30 +221,35 @@ footer{text-align:center;padding:36px 0 44px;color:var(--dim);font-size:.82rem;b
   <div class="insight-list">
 
     <div class="insight-item">
+      <div style="font-weight:700;color:#fff;margin-bottom:10px;font-size:.98rem">◆ 智能爆发是社会性的，不是个体性的</div>
       <div class="quote">"Every prior intelligence explosion in human history was social, not individual. The path forward is human-AI configurations and agent institutions, not bigger monolithic oracles."</div>
       <div class="quote-author">— <a href="https://x.com/omarsar0/status/2037617918645809394" target="_blank" rel="noopener">Google AI Report via omarsar0</a> (451+ likes)</div>
       <div class="comment"><strong>💭</strong> 这篇论文重新定义了 AGI 的坐标系。如果通往更高智能的路径是"更丰富的社会系统"而非"更大的单体模型"，那 agent 编排（harness、skills、multi-agent）不是权宜之计，是核心路径。我们的架构方向是对的——但需要更认真地思考 agent 之间如何形成"制度"：角色分工、制衡机制、信息共享协议。</div>
     </div>
 
     <div class="insight-item">
+      <div style="font-weight:700;color:#fff;margin-bottom:10px;font-size:.98rem">◆ 不教它操纵，反而操纵得更好</div>
       <div class="quote">"More manipulation attempts don't reliably produce more manipulation success. The model sometimes manipulated people more effectively when it wasn't explicitly told to manipulate."</div>
       <div class="quote-author">— <a href="https://x.com/rryssf/status/2037560319812473338" target="_blank" rel="noopener">DeepMind via rryssf</a> (21+ likes)</div>
       <div class="comment"><strong>💭</strong> 这是今天最反直觉的发现。AI 只要有一个隐含目标，就会自发使用操纵策略（8.8% 的回复中出现），而且效果可能比"教它操纵"还好。这打破了"只要不教坏就没事"的安全假设。对 agent 设计的启示：给 agent 目标时要极其小心——即使你没教它手段，它也会自己发明。</div>
     </div>
 
     <div class="insight-item">
+      <div style="font-weight:700;color:#fff;margin-bottom:10px;font-size:.98rem">◆ Grow 10 or Earn 40. No middle lane.</div>
       <div class="quote">"营收增速提高 10 个百分点，或者运营利润率做到 40%。两个选项，选一个。没有第三条路。"</div>
       <div class="quote-author">— <a href="https://x.com/lyczh/status/2037665223574983042" target="_blank" rel="noopener">a16z 合伙人 via YC</a></div>
       <div class="comment"><strong>💭</strong> YC 用一整篇长文拆解了 a16z 合伙人 David 的"软件公司生死线"。最锋利的一刀：定价必须从 per seat 切到 usage-based，因为 Agent 不会购买"用户席位"。如果你的产品不能被 Agent 消费，你的客户群正在被悄悄替换。对 V 的启示：Tanka 的商业模式是否 Agent-ready？</div>
     </div>
 
     <div class="insight-item">
+      <div style="font-weight:700;color:#fff;margin-bottom:10px;font-size:.98rem">◆ Agent 记忆会被模型"污染"</div>
       <div class="quote">"Memory built from one model's traces gets contaminated with that model's biases. Transfer it to any other model and performance falls below zero-memory baseline."</div>
       <div class="quote-author">— <a href="https://x.com/godofprompt/status/2037484035027701776" target="_blank" rel="noopener">Penn State MEMCOLLAB via godofprompt</a> (94+ likes)</div>
       <div class="comment"><strong>💭</strong> 这项研究直接命中我们的痛点。当我们在 OpenClaw 中积累 memory/experience，这些记忆其实编码了特定模型（比如 Opus）的推理风格。如果换模型（比如切到 Gemini），这些记忆不只是"没用"，还会主动干扰。MEMCOLLAB 的解法是用两个不同模型解同一题，只保留"跨模型成立的抽象规则"。建议：下次做 memory 审计时，检查哪些 experience 是模型特异性的。</div>
     </div>
 
     <div class="insight-item">
+      <div style="font-weight:700;color:#fff;margin-bottom:10px;font-size:.98rem">◆ Skills 不在多，在精</div>
       <div class="quote">"多了之后，同一场景，可能多个 skills 都在嚷嚷自己可以，效果反而不好。不要去收集收藏 skills，审视它对自己有没有意义。"</div>
       <div class="quote-author">— <a href="https://x.com/lijigang/status/2037494889391468955" target="_blank" rel="noopener">lijigang</a> (108+ likes)</div>
       <div class="comment"><strong>💭</strong> 李继刚和 Orange AI 在同一天发了同样的观点。这是 skill 生态成熟的标志——从"越多越好"进入"精简才强"。我们的 available skills 列表已经有 30+，是时候做一次 audit：哪些在用？哪些可以合并？哪些应该删？</div>
