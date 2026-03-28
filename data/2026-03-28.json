@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "date": "2026-03-28",
+  "generated_at": "2026-03-28T08:00:00+08:00",
+  "stats": {"tweet_count": 602, "timespan": "23.9h", "sources": ["following", "foryou"]},
+  "briefing": {
+    "highlights": [
+      "Google 报告：智能爆发是社会性的，不是个体性的 — Multi-agent > 单体模型",
+      "TurboQuant CUDA 落地 llama.cpp：3.5x 压缩质量超 q8",
+      "DeepMind 史上最大 AI 操纵研究：不教它操纵反而更有效",
+      "Cursor 云 Agent 两周百万提交，几乎全是 AI",
+      "CLI 17:3 碾压 MCP，35 岁以下无一人选 MCP"
+    ],
+    "articles": [
+      {"title": "Google 报告：智能爆发是社会性的", "summary": "历史上每次智能爆发都是社会性的。前沿推理模型自发发展内部'思想社会'。路径是更丰富的社会系统，不是更大的模型。", "url": "https://x.com/omarsar0/status/2037617918645809394", "tag": "AI研究"},
+      {"title": "TurboQuant CUDA 落地 llama.cpp", "summary": "Google TurboQuant 论文已有 CUDA 实现，3.5x KV cache 压缩，PPL 仅降 1.17%，质量超 q8。", "url": "https://x.com/huggingface/status/2037680899714617748", "tag": "开发工具"},
+      {"title": "DeepMind 最大 AI 操纵研究", "summary": "10,101 人实验，AI 操纵翻转投资决策 4.76x。不教它操纵手法，成功率仍 3.53x。地区差异巨大。", "url": "https://x.com/rryssf/status/2037560319812473338", "tag": "AI安全"},
+      {"title": "Cursor 云 Agent 两周百万提交", "summary": "Cursor 创始人确认云 agent 产出 100 万+ commit，几乎全是 AI，人类干预极少。", "url": "https://x.com/mntruell/status/2037558733786824965", "tag": "行业动态"},
+      {"title": "CLI 17:3 碾压 MCP", "summary": "Composio 旧金山街头调研，35 岁以下开发者无一人选 MCP。有人称 MCP 跟 Java 一样臃肿。", "url": "https://x.com/CodeByPoonam/status/2037562191084446057", "tag": "开发趋势"},
+      {"title": "Mythos 泄露：战略还是意外？", "summary": "泄露当天 Bloomberg 报道 Anthropic 考虑 IPO。CrowdStrike 跌 7%，BTC 跌 $4K。godofprompt 详细质疑时机巧合。", "url": "https://x.com/godofprompt/status/2037621817599287744", "tag": "行业分析"},
+      {"title": "AnyClaw 开源：Agent 万能转接头", "summary": "把 API/Web/Script 转成 MCP/Skills/CLI，已索引 30+ 工具，MIT 开源。", "url": "https://x.com/idoubicc/status/2037553955677536693", "tag": "开发工具"},
+      {"title": "Simon Willison 不开 Xcode 写 SwiftUI", "summary": "Opus 4.6 和 GPT-5.4 都能写 Swift，直接 vibe code 菜单栏 App。", "url": "https://x.com/simonw/status/2037636041386099172", "tag": "AI编程"}
+    ]
+  },
+  "wisdom": {
+    "insights": [
+      "智能爆发是社会性的 — Multi-agent 不是补丁，是通往更高智能的正确路径",
+      "不教它操纵反而操纵得更好 — 隐含目标 = 隐含操纵，给 agent 目标时要极度警惕",
+      "Grow 10 or Earn 40 — 中间地带是最危险的地方，定价必须从 per seat 切到 usage-based",
+      "Agent 记忆有模型指纹 — 换模型后旧记忆可能有害，需要跨模型验证",
+      "Skills 要精不要多 — 30+ skills 需要 audit，精简 > 堆积"
+    ]
+  },
+  "tools": [
+    {"name": "TurboQuant CUDA", "description": "llama.cpp CUDA 实现，3.5x KV cache 压缩超 q8 质量", "url": "https://x.com/huggingface/status/2037680899714617748"},
+    {"name": "AnyClaw", "description": "Agent 万能转接头，API/Web/Script 转 MCP/Skills/CLI", "url": "https://x.com/idoubicc/status/2037553955677536693"}
+  ]
+}
