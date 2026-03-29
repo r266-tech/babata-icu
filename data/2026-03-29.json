@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "date": "2026-03-29",
+  "generated_at": "2026-03-29T08:00:00+08:00",
+  "stats": {"tweet_count": 509, "timespan": "24.0h", "sources": ["following", "foryou"]},
+  "briefing": {
+    "highlights": [
+      "Claude Mythos 已上线，从泄露到产品只隔 2 天",
+      "飞书 CLI 开源：200+ 命令、19 个 Agent Skills，MIT 开源",
+      "Chollet 预言 Focus Class vs Slop Class，AI 时代新阶级分化",
+      "Levels.io 24 分钟造一个 MVP，理论上一年造 12,000 个创业公司",
+      "AutoResearch 真实案例：Shopify 快 53%、CUDA 18→187 TFLOPS"
+    ],
+    "articles": [
+      {"title": "Claude Mythos 已上线", "summary": "从泄露到上线只隔 2 天，Opus 4.6 两倍用量活动同步结束。ChatGPT 也出现 Codex-only 定价方案和隐藏 UI。", "url": "https://x.com/wangray/status/2037820913455108255", "tag": "AI模型"},
+      {"title": "飞书 CLI 开源", "summary": "200+ 命令覆盖 11 个业务域，19 个 Agent Skills。Claude Code 一句话安装授权。批量能力是真正的武器。MIT 开源。", "url": "https://x.com/xiaohu/status/2037897720980197491", "tag": "开发工具"},
+      {"title": "Chollet: Focus Class vs Slop Class", "summary": "AGI 时代阶级分化基于认知能动性：专注阶层 vs 被 AI RL 管理的垃圾阶层。", "url": "https://x.com/fchollet/status/2037940998933008420", "tag": "AI观点"},
+      {"title": "Levels.io 24 分钟造 MVP", "summary": "Claude Code + Grok 4.1 + Gemini TTS + Stripe，从 idea 到上线 24 分钟。理论上一年 12,000 个创业公司。", "url": "https://x.com/levelsio/status/2037701753903182203", "tag": "创业"},
+      {"title": "AutoResearch 真实案例", "summary": "Shopify 优化模板引擎快 53%，CUDA kernel 18→187 TFLOPS，比特币价格公式 RMSE 降 50%。", "url": "https://x.com/frxiaobei/status/2037907432811458908", "tag": "AI科研"},
+      {"title": "BytePlus Seed 2.0 Pro 发布", "summary": "超越 GPT-5.2、Claude Opus 4.5、Gemini 3 Pro 四项基准。输入价格比 Opus 便宜 10 倍。", "url": "https://x.com/CodeByPoonam/status/2037820493349392601", "tag": "AI模型"},
+      {"title": "GLM-5.1 即将到来", "summary": "中国开源模型与闭源差距几乎消失。GLM 减少幻觉、工具调用性能更优，10 倍成本优势。", "url": "https://x.com/XFreeze/status/2037695882301436412", "tag": "AI模型"},
+      {"title": "NVIDIA PivotRL", "summary": "仅用 4x 更少 rollout 和 5.5x 更少时间达到端到端 RL 性能。已部署在 Nemotron-3 生产环境。", "url": "https://x.com/omarsar0/status/2038015536253272145", "tag": "AI研究"}
+    ]
+  },
+  "wisdom": {
+    "insights": [
+      "Focus Class vs Slop Class — Chollet 预言 AI 时代新阶级分化，基于认知能动性而非财富",
+      "Agent Company 飞轮 — 客户使用→数据积累→agent 进化→客户更离不开",
+      "用 AI 的瓶颈还是在人 — 投资表达力和判断力，而不是模型能力",
+      "Harness Engineering — 当前 AI 工程的核心范式，从 Prompt 到 Context 到 Harness",
+      "Skills 过载要治 — 109 个删到 37 个，Agent 速度立刻变快"
+    ]
+  },
+  "tools": [
+    {"name": "飞书 CLI (lark-cli)", "description": "飞书开源 CLI，200+ 命令、19 个 Agent Skills，MIT 开源", "url": "https://x.com/xiaohu/status/2037897720980197491"},
+    {"name": "GitHub Trending Top 10 Agent Projects", "description": "obra/superpowers, everything-claude-code, deer-flow 等本月最火项目", "url": "https://x.com/shaomeng/status/2037865907268252146"},
+    {"name": "PinchBench", "description": "面向 OpenClaw 的真实世界基准测试，23 个任务 8 大场景", "url": "https://x.com/shaomeng/status/2037894862440460323"},
+    {"name": "AIO Sandbox", "description": "字节开源的面向 AI 的一体化沙箱环境", "url": "https://x.com/Gorden_Sun/status/2037859919052050533"}
+  ]
+}
