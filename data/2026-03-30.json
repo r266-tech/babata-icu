@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "date": "2026-03-30",
+  "generated_at": "2026-03-30T08:00:00+08:00",
+  "stats": {"tweet_count": 451, "timespan": "23.9h", "sources": ["following", "foryou"]},
+  "briefing": {
+    "highlights": [
+      "Pretext：Cheng Lou 开源 500x 于 DOM 的文本测量库，AI 时代 UI 生成基础设施",
+      "SlopCodeBench：AI 写代码通过测试但内部腐烂，89.8% 轨迹冗余度上升",
+      "Claude 自主破解所有 AI 安全系统：100% 突破 Meta SecAlign-70B",
+      "Mythos 已确认真实：多人获访问，'magnificent, mighty model'",
+      "Autoresearch 能重写自己的搜索算法，5x 提升"
+    ],
+    "articles": [
+      {"title": "Pretext：前端 UI 最后一块瓶颈被破解", "summary": "Cheng Lou 开源纯 TypeScript 文本测量库，500x 于 DOM 测量，完全不触发 reflow。支持多语言混排和 Emoji。", "url": "https://x.com/_chenglou/status/2038271588030984488", "tag": "前端"},
+      {"title": "SlopCodeBench：AI 写代码隐性腐烂", "summary": "迭代任务中代码通过测试但圈复杂度从 29 到 285，89.8% 轨迹冗余度上升，成本 2.9x 但正确率没改善。", "url": "https://x.com/godofprompt/status/2038335755995750758", "tag": "AI编程"},
+      {"title": "Claude 破解所有 AI 安全系统", "summary": "Max Planck 让 Claude 自主迭代 jailbreak 算法，第 6 轮超越人类，Meta SecAlign-70B 被 100% 攻破。", "url": "https://x.com/rryssf_/status/2038175786654658741", "tag": "AI安全"},
+      {"title": "Jenny Wen 揭秘 Anthropic 内部", "summary": "几天造功能，不再写 specs。Cowork 原型迭代了一年才公开。People think we built it in 10 days.", "url": "https://x.com/petergyang/status/2038260565769068870", "tag": "行业洞察"},
+      {"title": "Autoresearch 重写自己的搜索算法", "summary": "外层循环读源码找瓶颈生成新 Python 注入，5x 提升。瓶颈是人类锁定的搜索架构不是参数。", "url": "https://x.com/godofprompt/status/2038175325721608438", "tag": "AI研究"},
+      {"title": "GitLab 创始人自建抗癌方案成功", "summary": "标准治疗无路后组建团队做最大化诊断+并行疗法+定制 mRNA 疫苗，最终缓解。25TB 数据公开。", "url": "https://x.com/vikingmute/status/2038223289806667940", "tag": "创业"},
+      {"title": "便宜模型反而更贵", "summary": "Gemini 3 Flash 列价比 GPT-5.2 便宜 78%，实际成本反高 22%。同 query 某模型多用 900% thinking tokens。", "url": "https://x.com/omarsar0/status/2038271724937224386", "tag": "AI模型"},
+      {"title": "Hermes Agent 开源", "summary": "NousResearch 自进化 Agent：持久记忆+自主 Skills+GEPA 进化，每次 $2-10。YuLin807 实测确认。", "url": "https://x.com/shaomeng/status/2038238691739550101", "tag": "Agent框架"}
+    ]
+  },
+  "wisdom": {
+    "insights": [
+      "从感知到计算 — Pretext 证明'用眼睛看'可以变成纯数学，每个领域都会经历",
+      "通过测试 ≠ 做完 — 真正问题是'还能被理解吗'，不只是'能运行吗'",
+      "分数先于真理 — 任何自动评估都必须有独立验证",
+      "给 agent 建立好习惯 — SOUL.md 和 rules 就是 agent 的习惯，定期审视",
+      "智能爆发来自更少的限制 — 不是更聪明，而是移除卡脖子瓶颈"
+    ]
+  },
+  "tools": [
+    {"name": "Pretext", "description": "500x 于 DOM 的文本测量库，AI 时代 UI 生成基础设施", "url": "https://x.com/_chenglou/status/2038271588030984488"},
+    {"name": "RTK (Rust Token Killer)", "description": "自动去噪合并，降 Claude Code 60% token 消耗", "url": "https://x.com/jasonzhou1993/status/2038215854584906078"},
+    {"name": "awesome-harness-engineering", "description": "Agent harness 资源合集，架构约束+反馈回路+运行时 scaffolding", "url": "https://x.com/sanbuphy/status/2038222350085398608"},
+    {"name": "MCPorter v0.8", "description": "MCP-to-CLI 转换器，更可靠 OAuth+daemon 模式", "url": "https://x.com/steipete/status/2038074759527981416"}
+  ]
+}
