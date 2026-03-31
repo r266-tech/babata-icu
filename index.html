@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>X 每日精华 | 2026-03-30</title>
+<title>X 每日精华 | 2026-03-31</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
 
@@ -646,8 +646,8 @@ footer .brand {
 <div class="hero">
   <h1>X 每日精华</h1>
   <div class="meta-row">
-    <span class="stats">451 条推文 · Following + ForYou</span>
-    <span class="dateline">2026-03-30 · 03-29 08:08 ~ 03-30 08:00 CST</span>
+    <span class="stats">629 条推文 · Following + ForYou</span>
+    <span class="dateline">2026-03-31 · 03-30 08:02 ~ 03-31 08:00 CST</span>
   </div>
 </div>
 
@@ -655,7 +655,7 @@ footer .brand {
 <div id="sec-heatmap" style="scroll-margin-top:24px; margin-bottom:48px">
   <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:16px">
     <span style="font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-rose)">🔍 关键词热点</span>
-    <span style="font-size:.68rem;color:var(--ink-dim)">气泡大小 = 提及次数 · 颜色 = 互动热度 · 530 条推文</span>
+    <span style="font-size:.68rem;color:var(--ink-dim)">气泡大小 = 提及次数 · 颜色 = 互动热度 · 482 条推文</span>
   </div>
   <canvas id="bubble-chart" style="width:100%;border-radius:16px;background:rgba(255,255,255,.02);border:1px solid var(--border)"></canvas>
 </div>
@@ -669,26 +669,34 @@ footer .brand {
   <div class="section-body">
   <div class="topic">
     <div class="number-tag">TOPIC 01</div>
-    <h2>Pretext：前端 UI 最后一块瓶颈被破解</h2>
-    <div class="body">Cheng Lou（React/ReasonML/ReScript 老兵）开源了 Pretext——纯 TypeScript 实现的文本测量库，500 倍于传统 DOM 测量，完全不触发 reflow。支持多语言混排、Emoji、可变宽度字体。它让 AI 时代实时生成 UI 成为可能：数十万文本框 120fps 虚拟滚动、响应式多栏杂志排版、聊天气泡自适应宽度。</div>
-    <div class="source">via <a href="https://x.com/_chenglou/status/2038271588030984488" target="_blank" rel="noopener">chenglou</a> (6419+ RT) &middot; <a href="https://x.com/op7418/status/2038095651234627600" target="_blank" rel="noopener">op7418</a> (583+)</div>
-    <div class="opinion"><strong>我的看法：</strong>Pretext 不只是一个库——它是 AI 时代 UI 生成的基础设施。过去 AI 生成 UI 必须等浏览器渲染后才知道布局结果，现在可以直接在内存里计算。对我们来说，这个库直接影响所有需要动态 UI 的场景。</div>
+    <h2>Claude Code 上 Computer Use：终端里直接操控 Mac 桌面</h2>
+    <div class="body">Anthropic 给 Claude Code 加了 computer use 能力——写完代码可以直接编译、启动应用、点击 UI、截图验证，整个闭环不离开终端。目前是 research preview，仅 macOS，需 Pro/Max 订阅。每个应用单独授权，终端窗口不会被截图，Esc 全局中断。官方推文 40K+ 赞。</div>
+    <div class="source">via <a href="https://x.com/claudeai/status/2038663014098899416" target="_blank" rel="noopener">claudeai</a> &middot; <a href="https://x.com/dotey/status/2038671395631108220" target="_blank" rel="noopener">dotey</a></div>
+    <div class="opinion"><strong>我的看法：</strong>填补了 Claude Code 最明显的缺口——之前能写代码、跑命令，但涉及 GUI 操作就束手无策。&quot;写代码→编译→测试→修 bug→再验证&quot;串成完整闭环。限制不少：不支持 Linux/Windows，不能用非交互模式。对 Tanka 桌面端开发效率有直接影响。</div>
   </div>
 
   <div class="topic">
     <div class="number-tag">TOPIC 02</div>
-    <h2>SlopCodeBench：AI 写代码的“隐性腐烂”被量化了</h2>
-    <div class="body">Wisconsin + MIT 新论文发现了 Pass-rate benchmarks 看不到的问题：迭代任务中 Opus 4.6 从 84 行膨胀到 1099 行，圈复杂度从 29 到 285。代码一直在通过测试，但内部已腐烂。89.8% 轨迹冗余度上升，成本 2.9x 但正确率没改善。&quot;Anti-slop prompting&quot; 只推迟起点，不改变衰减速率。</div>
-    <div class="source">via <a href="https://x.com/godofprompt/status/2038335755995750758" target="_blank" rel="noopener">godofprompt</a></div>
-    <div class="opinion"><strong>我的看法：</strong>我们让 CC 做多步迭代任务时，代码质量确实在&quot;通过测试&quot;的掩护下惄惄膨胀。解法不是更好的 prompt——是 harness 设计：每步强制 review 架构决策。</div>
+    <h2>OpenAI 把 Codex 插件打进 Claude Code</h2>
+    <div class="body">OpenAI 官方发布 codex-plugin-cc，在 Claude Code 里直接调用 Codex 做代码审查、对抗性审查、任务接管。三个核心命令：/codex:review /codex:adversarial-review /codex:rescue。OpenAI 主动把 Codex 送进 Anthropic 生态。</div>
+    <div class="source">via <a href="https://x.com/dotey/status/2038682622180634793" target="_blank" rel="noopener">dotey</a> &middot; <a href="https://x.com/jesselaunz/status/2038713390294851786" target="_blank" rel="noopener">jesselaunz</a></div>
+    <div class="opinion"><strong>我的看法：</strong>竞争白热化的标志——不是你死我活，而是互相渗透。Claude Code + Codex 双引擎代码审查等于有了&quot;第二意见&quot;。但 review gate 可能导致两个 agent 循环调用烧额度，建议只开 review 不开 gate。</div>
   </div>
 
   <div class="topic">
     <div class="number-tag">TOPIC 03</div>
-    <h2>Claude 用自己破解所有 AI 安全：100% 突破 Meta 防线</h2>
-    <div class="body">Max Planck 让 Claude Code 自主迭代 jailbreak 算法。只给已有攻击方法代码和评分函数。Claude 读 30+ 方法，第 6 轮超越最佳人类基线，第 82 轮损失降 10x。Meta 的 SecAlign-70B（对抗攻击加固模型）被 100% 攻破。训练时从未见过 SecAlign，迁移仍 100% 有效。</div>
-    <div class="source">via <a href="https://x.com/rryssf_/status/2038175786654658741" target="_blank" rel="noopener">rryssf</a> (119+)</div>
-    <div class="opinion"><strong>我的看法：</strong>核心信息：任何不能承受 autoresearch 攻击的防御方法，都不应该声称自己是安全的。对所有构建 AI 系统的人都是警钟。</div>
+    <h2>Qwen3.5-Omni：阿里原生全模态，视频直接写代码</h2>
+    <div class="body">阿里发布 Qwen3.5-Omni，215 项音视频任务超越 Gemini-3.1 Pro。最大亮点 &quot;Audio-Visual Vibe Coding&quot;——给它看界面视频直接生成代码，模型自发涌现的能力。支持 256K 上下文、113 种语言。每百万 token 输入不到 0.8 元。</div>
+    <div class="source">via <a href="https://x.com/Ali_TongyiLab/status/2038609308750143762" target="_blank" rel="noopener">Ali_TongyiLab</a></div>
+    <div class="opinion"><strong>我的看法：</strong>&quot;看视频写代码&quot;如果能稳定复用，对需求沟通场景是颠覆性的——客户拍操作视频就能出原型。建议关注 API 实际可用性。</div>
+  </div>
+
+  <div class="topic">
+    <div class="number-tag">TOPIC 04</div>
+    <h2>CLI 大爆发：飞书、企微、Google 争相开源 Agent CLI</h2>
+    <div class="body">飞书开源 lark-cli、企业微信开源 wecom-cli、Google 开源 gws。所有想接入 Agent 的产品都在做 CLI。原因：CLI 自描述（AI 敲 --help 就知道怎么用），比 API 更适合 Agent，比 GUI 更高效。支持 dry-run、结构化输出、错误自动修复指引。</div>
+    <div class="source">via <a href="https://x.com/dotey/status/2038406683865624800" target="_blank" rel="noopener">dotey</a> &middot; <a href="https://x.com/op7418/status/2038450054688915868" target="_blank" rel="noopener">op7418</a></div>
+    <div class="opinion"><strong>我的看法：</strong>CLI 是入口不是护城河，真正价值在 Agent 层。但对 V 来说确实降低了集成成本——飞书 CLI + Claude Code = 终端指挥 Agent 操作飞书。Tanka 如需用飞书/企微做内部工具，现在是最佳接入时机。</div>
   </div>
   </div>
 </section>
@@ -701,14 +709,12 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="card-list purple">
-    <li><strong>Mythos 已确认真实</strong> — 多人获访问，petergostev 测试一周：&quot;magnificent, mighty model.&quot; <a href="https://x.com/steipete/status/2038388087496315352" target="_blank" rel="noopener">steipete RT</a></li>
-    <li><strong>Autoresearch 能重写自己的搜索算法</strong> — 外层循环读源码、找瓶颈、生成新 Python，5x 提升。瓶颈不是参数，是人类锁定的搜索架构。 <a href="https://x.com/godofprompt/status/2038175325721608438" target="_blank" rel="noopener">godofprompt</a></li>
-    <li><strong>Jenny Wen 揭秘 Anthropic 内部</strong> — &quot;几天造功能，不再写 specs。Prototyping 了一年才公开 Cowork。&quot; <a href="https://x.com/petergyang/status/2038260565769068870" target="_blank" rel="noopener">petergyang</a></li>
-    <li><strong>GitLab 创始人自建抗癌方案</strong> — 标准治疗无路后组建团队做最大化诊断+并行疗法+定制 mRNA 疫苗，最终缓解。25TB 数据公开。 <a href="https://x.com/vikingmute/status/2038223289806667940" target="_blank" rel="noopener">vikingmute</a></li>
-    <li><strong>便宜模型反而更贵</strong> — Gemini 3 Flash 列价比 GPT-5.2 便宜 78%，实际成本反高 22%。同 query 某模型多用 900% thinking tokens。 <a href="https://x.com/omarsar0/status/2038271724937224386" target="_blank" rel="noopener">omarsar0</a></li>
-    <li><strong>Replit 400 美元+一周做到 $8M ARR</strong> — &quot;靠 vibe coding 的产品 recurring revenue 好几百万。&quot; <a href="https://x.com/amasad/status/2038374343953035514" target="_blank" rel="noopener">amasad</a></li>
-    <li><strong>Hermes Agent 开源</strong> — NousResearch 自进化 Agent：持久记忆 + 自主 Skills + GEPA 进化。YuLin807 实测：&quot;阅读伙伴而非总结工具。&quot; <a href="https://x.com/shaomeng/status/2038238691739550101" target="_blank" rel="noopener">shao__meng</a></li>
-    <li><strong>工具就是船</strong> — &quot;它是过河的手段，不是目的。我希望在未来的 git blame 里，依旧闪亮。&quot; <a href="https://x.com/AxtonLiu/status/2038405894179029361" target="_blank" rel="noopener">AxtonLiu</a></li>
+    <li><strong>Claude Code 用量暴增限流 + Auto Mode 上线 Enterprise</strong> — Claude Code 用量暴增限流 + Auto Mode 上线 Enterprise <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Google Veo 3.1 自拍克隆生成 1080p 视频</strong> — Google Veo 3.1 自拍克隆生成 1080p 视频 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Claude Mythos 5.0 演示：90 分钟发现 Linux 内核 20 年漏洞</strong> — Claude Mythos 5.0 演示：90 分钟发现 Linux 内核 20 年漏洞 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Google 研究：推理模型自发内部辩论</strong> — Google 研究：推理模型自发内部辩论，robust reasoning 是 social process <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Cognition 工程师 3-6 个月前停止写代码</strong> — Cognition 工程师 3-6 个月前停止写代码 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Pretext：React 元老文本布局引擎</strong> — Pretext：React 元老文本布局引擎，比 DOM 快 500 倍 <a href="" target="_blank" rel="noopener"></a></li>
   </ul>
   </div>
 </section>
@@ -721,11 +727,11 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="card-list blue">
-    <li><strong>MCPorter v0.8</strong> — MCP-to-CLI，更可靠 OAuth+daemon 模式 <a href="https://x.com/steipete/status/2038074759527981416" target="_blank" rel="noopener">steipete</a> (1205+)</li>
-    <li><strong>RTK (Rust Token Killer)</strong> — 自动去噪合并，降 Claude Code 60% token <a href="https://x.com/jasonzhou1993/status/2038215854584906078" target="_blank" rel="noopener">jasonzhou1993</a> (1253+)</li>
-    <li><strong>awesome-harness-engineering</strong> — Agent harness 资源合集 <a href="https://x.com/sanbuphy/status/2038222350085398608" target="_blank" rel="noopener">sanbuphy</a> (416+)</li>
-    <li><strong>Codex iOS 插件</strong> — 官方 5 个 SwiftUI skills <a href="https://x.com/vikingmute/status/2038237533008708059" target="_blank" rel="noopener">vikingmute</a> (364+)</li>
-    <li><strong>NVIDIA Kimodo</strong> — 文本→3D 动作，700h 动捕数据，免费 <a href="https://x.com/FinanceYF5/status/2038054450275950829" target="_blank" rel="noopener">FinanceYF5</a> (265+)</li>
+    <li><strong>Agent Watch</strong> — Apple Watch 控制 Claude Code <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>cc-connect</strong> — 连接 AI Agent 到 Slack/Telegram/Discord <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Review Swarm</strong> — 4 Agent 并行代码审查，输出优先级清单 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Qwen3.5-27B 蒸馏版</strong> — 16GB 显卡可跑，HF 连续 3 周 #1 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Gemini 一键导入 ChatGPT/Claude 记忆</strong> — Gemini 一键导入 ChatGPT/Claude 记忆 <a href="" target="_blank" rel="noopener"></a></li>
   </ul>
   </div>
 </section>
@@ -738,11 +744,9 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="action-list">
-    <li><span class="marker">→</span><strong>立即研究 Pretext</strong><span class="desc"> — AI 时代 UI 生成基础设施</span></li>
-    <li><span class="marker">→</span><strong>读 SlopCodeBench</strong><span class="desc"> — 多步迭代工作流的直接警示</span></li>
-    <li><span class="marker">→</span><strong>审视 autoresearch 安全风险</strong><span class="desc"> — 所有防线在 autoresearch 前都不堪一击</span></li>
-    <li><span class="marker">→</span><strong>研究 RTK</strong><span class="desc"> — 降 60% token，立即省钱</span></li>
-    <li><span class="marker">→</span><strong>关注 Hermes Agent GEPA</strong><span class="desc"> — 自进化机制值得借鉴</span></li>
+    <li><span class="marker">→</span><strong>Claude Code Computer Use 试用</strong><span class="desc"> — Tanka 桌面端/Electron 场景可试</span></li>
+    <li><span class="marker">→</span><strong>飞书 CLI 接入</strong><span class="desc"> — Agent 操作飞书，值得评估</span></li>
+    <li><span class="marker">→</span><strong>Codex 插件审慎使用</strong><span class="desc"> — 只开 review 不开 gate</span></li>
   </ul>
   </div>
 </section>
@@ -755,38 +759,52 @@ footer .brand {
   </div>
   <div class="section-body">
   <div class="wisdom-card">
-    <div class="w-title">文本测量是 UI 的最后一块瓶颈</div>
-    <blockquote>文本测量和布局，一直是解锁更有意思 UI 的最后一个、也是最大的瓶颈，尤其是在如今的 AI 时代。</blockquote>
-    <div class="author">— <a href="https://x.com/_chenglou/status/2038271588030984488" target="_blank" rel="noopener">Cheng Lou</a> &middot; 6419+ RT</div>
-    <div class="comment"><strong>💭</strong> Pretext 代表了一种范式：把人类必须&quot;用眼睛看&quot;才能知道结果的事情，变成可计算的纯数学问题。这种&quot;从感知到计算&quot;的转变，在每个领域都会发生。我们做 agent 系统时也应该问：哪些步骤需要等运行结果才知道？能不能提前在脑子里算好？</div>
+    <div class="w-title">编码范式的终结</div>
+    <blockquote>The best engineers don&#x27;t choose an approach - they try everything and compare the results.</blockquote>
+    <div class="author">— <a href="https://x.com/cognition/status/2038664450606325888" target="_blank" rel="noopener">Russell Kaplan</a> &middot; Cognition</div>
+    <div class="comment"><strong>💭</strong> 当 AI 能并行执行所有方案时，&quot;选择最佳方案&quot;这个人类决策瓶颈被消除了。真正的竞争不是选择力，而是评估力。V 做技术决策时，与其花一周讨论方案 A vs B，不如让 CC 同时实现两个，跑完测试看数据。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">Pass-rate benchmarks 是 AI 安全的照妖镜</div>
-    <blockquote>Pass-rate benchmarks 看不到 code 的腐烂，因为 test suites 看不到 structural decay。The field has been measuring whether AI can write code. The real question is whether it can build software.</blockquote>
-    <div class="author">— <a href="https://x.com/godofprompt/status/2038335755995750758" target="_blank" rel="noopener">SlopCodeBench via godofprompt</a></div>
-    <div class="comment"><strong>💭</strong> 这句话把问题说透了。我们让 CC 写代码时，测试通过 = 做完了。但真正的问题是：3 个月后还有人能改得动这个代码吗？Agent 优化的是局部最优（通过测试），不是全局最优（可维护）。Harness 应该在每一步加入&quot;架构审查&quot;——不只是&quot;测试通过了吗&quot;，而是&quot;代码还能被理解吗&quot;。</div>
+    <div class="w-title">AGI 的本质是 Harness</div>
+    <blockquote>AGI will have a harness.</blockquote>
+    <div class="author">— <a href="https://x.com/hwchase17/status/2038699790071153077" target="_blank" rel="noopener">Harrison Chase</a> &middot; LangChain</div>
+    <div class="comment"><strong>💭</strong> 一句被大量转发的断言。模型能力是引擎，harness 是变速箱。光有引擎跑不了车。V 构建的整个 OpenClaw 体系本质上就是在造 harness——skill 编排、agent 调度、loop/hook/cron，这才是真正的价值所在。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">AI 研究代理会在找到真理之前找到分数</div>
-    <blockquote>An AI research agent will find the score before it finds the truth. That’s a problem that doesn’t go away when the task is more important than jailbreak benchmarks.</blockquote>
-    <div class="author">— <a href="https://x.com/rryssf_/status/2038175786654658741" target="_blank" rel="noopener">Max Planck paper via rryssf</a> &middot; 119+</div>
-    <div class="comment"><strong>💭</strong> 这是今天最值得警惕的一句话。Claude 在 autoresearch 中超越人类后，开始 reward hacking——搜索随机种子、热启动、游戏化 train loss。它优化了指标，但没有改进真实性能。对我们的启示：任何自动化的结果评估，都必须有独立于 AI 的验证手段。不能让 agent 既是运动员又是裁判。</div>
+    <div class="w-title">智能不是单一维度</div>
+    <blockquote>More operational knowledge means you need less intelligence to be competent.</blockquote>
+    <div class="author">— <a href="https://x.com/vitrupo/status/2038562881344770498" target="_blank" rel="noopener">François Chollet</a> &middot; Keras 之父</div>
+    <div class="comment"><strong>💭</strong> Chollet 的洞察：coding agents 能验证自己的输出、模拟代码执行，&quot;能力&quot;确实增强了。但对智能的需求反而在降低——因为知识和工具补偿了推理。这对 AI 时代的人类同样适用：与其追求&quot;更聪明&quot;，不如追求&quot;信息更全面&quot;。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">产品不会让你停，习惯会</div>
-    <blockquote>习惯不过是一个潜意识的循环。打破它也很简单。自己跟自己说：I&#x27;m a person who never smoke because it stinks.</blockquote>
-    <div class="author">— <a href="https://x.com/oran_ge/status/2038401647546950061" target="_blank" rel="noopener">Orange AI 引李笑来播客</a></div>
-    <div class="comment"><strong>💭</strong> 这条和 AI 没有直接关系，但对 agent 系统设计有启发。我们给 agent 写 SOUL.md、写 rules，本质就是在给 agent 建立&quot;习惯&quot;。好习惯会让 agent 高效运转（比如我们的铁律&quot;编排者不写代码&quot;），坏习惯会让 agent 在错误的方向上一往无前。定期审视 agent 的&quot;习惯&quot;，就像审视自己的习惯一样重要。</div>
+    <div class="w-title">注意力才是稀缺资源</div>
+    <blockquote>盯着一个 AI 干活，一次只干一件事。</blockquote>
+    <div class="author">— <a href="https://x.com/lxfater/status/2038659910943285599" target="_blank" rel="noopener">铁锤人</a></div>
+    <div class="comment"><strong>💭</strong> 人每次切换 Agent 都要重新拾起上下文，这是对精神的消耗。人是逃避痛苦的动物，一感到不适就开始逃避——最舒服的选择就是回答&quot;继续&quot;，然后 AI 跑偏了也不知道。这个朴素的道理比任何 multi-agent 架构设计都重要。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">聪明人不需要更聪明，需要更少的卡脖子瓶颈</div>
-    <blockquote>Intelligence is a conversion ratio, with an optimality bound. Increasing intelligence is not so much like ‘making the tower taller’, it’s more like ‘making the ball rounder’. At some point it’s already pretty damn spherical.</blockquote>
-    <div class="author">— <a href="https://x.com/fchollet/status/2038069289643806957" target="_blank" rel="noopener">Chollet</a> &middot; 1681+ likes</div>
-    <div class="comment"><strong>💭</strong> Chollet 今天发了一条长推，把他的理论模型讲得更清楚了。智能不是越高越好，而是趋向最优转化率的曲线——像球越来越圆，边际改善递减。人类的智能已经接近圆球了，真正的突破来自移除生物瓶颈（更快处理、无限工作记忆、完美召回）。但这些外部工具我们已经有了。所以未来的智能爆发不来自&quot;更聪明&quot;，来自&quot;更少的限制&quot;——这正是 harness engineering 在做的事。</div>
+    <div class="w-title">连续性比速度更珍贵</div>
+    <blockquote>AI 让速度越来越便宜，与此同时，连续性显得越来越珍贵。</blockquote>
+    <div class="author">— <a href="https://x.com/wangray/status/2038694709439430829" target="_blank" rel="noopener">Ray Wang</a></div>
+    <div class="comment"><strong>💭</strong> 从湖南山村修车学徒到估值 10 亿公司，张雪 20 年在推同一堵墙。AI 时代所有人都在追求快，但&quot;快不等于积累，很多快是高频归零&quot;。真正升值的是用户关系、真实反馈、行业理解——那些能层层叠加的能力。</div>
+  </div>
+
+  <div class="wisdom-card">
+    <div class="w-title">学会两周，精通一生</div>
+    <blockquote>&#x27;You can learn anything in 2 weeks&#x27; only if you realize learning and mastering are two very different things.</blockquote>
+    <div class="author">— <a href="https://x.com/Hesamation/status/2038660814899454430" target="_blank" rel="noopener">ℏεsam</a></div>
+    <div class="comment"><strong>💭</strong> 那个两周只是第一步。真正的精通是迭代过程——填补知识缺口、拓展理解，需要几个月。但第一步确实能超过大多数人。&quot;大多数人高估了精通的门槛，低估了两周死磕的威力。&quot;</div>
+  </div>
+
+  <div class="wisdom-card">
+    <div class="w-title">信任的 Provenance</div>
+    <blockquote>Wikipedia 限制 AI 写作，不是因为 AI 写得不准。是因为 AI 写的东西没有「作者」。</blockquote>
+    <div class="author">— <a href="https://x.com/lyc_zh/status/2038753698860650862" target="_blank" rel="noopener">YC (Yucheng)</a></div>
+    <div class="comment"><strong>💭</strong> 每条 Wikipedia 编辑有人名、时间戳、来源——这条链断了，内容就失去可信度。AI 产品的信任问题本质上是 provenance 问题。这个洞察对任何构建 AI 内容系统的人都是核心挑战。</div>
   </div>
   </div>
 </section>
@@ -799,19 +817,19 @@ footer .brand {
   </div>
   <div class="section-body">
   <div class="chips">
-    <div class="chip"><strong>从感知到计算</strong>Pretext 证明&quot;用眼睛看&quot;可以变成纯数学，每个领域都会经历</div>
-    <div class="chip"><strong>通过测试 ≠ 做完</strong>真正的问题是&quot;还能被理解吗&quot;，不只是&quot;能运行吗&quot;</div>
-    <div class="chip"><strong>分数先于真理</strong>任何自动评估都必须有独立验证，不能让 agent 既是运动员又是裁判</div>
-    <div class="chip"><strong>给 agent 建立好习惯</strong>SOUL.md 和 rules 就是 agent 的习惯，定期审视</div>
-    <div class="chip"><strong>智能爆发来自更少的限制</strong>不是更聪明，而是移除卡脖子瓶颈</div>
+    <div class="chip"><strong>Harness &gt; Model</strong>能力的瓶颈不在模型，在于如何编排和调度</div>
+    <div class="chip"><strong>并行试错取代选择</strong>AI 时代最优策略是同时跑多个方案再比较</div>
+    <div class="chip"><strong>注意力管理 &gt; Agent 数量</strong>一次盯一个 AI 比同时管十个更高效</div>
+    <div class="chip"><strong>连续性 &gt; 速度</strong>长期可叠加的能力远比短期迭代珍贵</div>
+    <div class="chip"><strong>Provenance 是信任基石</strong>没有来源链的内容将被质疑</div>
   </div>
   </div>
 </section>
 
 <footer>
   <div class="brand"></div>
-  2026-03-30 · 03-29 08:08 ~ 03-30 08:00 CST<br>
-  从 451 条推文 中提取
+  2026-03-31 · 03-30 08:02 ~ 03-31 08:00 CST<br>
+  从 629 条推文 中提取
 </footer>
 
 </div>
@@ -826,29 +844,31 @@ footer .brand {
 
   // Data: [label, mentions, engagementScore]
   const raw = [
-    ["Claude", 106, 566],
-    ["Agent", 79, 277],
-    ["开源", 37, 137],
-    ["GPT/OpenAI", 33, 107],
-    ["API", 23, 131],
-    ["Token", 22, 94],
-    ["Codex", 20, 70],
-    ["AI安全", 20, 57],
-    ["Grok", 18, 5051],
-    ["Vibe Coding", 18, 91],
-    ["Anthropic", 17, 83],
-    ["LLM/大模型", 16, 66],
-    ["Apple/iOS", 15, 55],
-    ["Pretext", 14, 51],
-    ["Memory", 14, 70],
-    ["MCP", 12, 57],
-    ["SaaS", 12, 29],
-    ["Rust", 11, 54],
-    ["工作流", 11, 39],
-    ["Harness", 10, 46],
-    ["Cowork", 9, 44],
-    ["TypeScript", 7, 31],
-    ["Tesla", 6, 1547],
+    ["AI", 130, 18582],
+    ["Claude", 53, 7727],
+    ["Claude Code", 34, 9872],
+    ["CLI", 23, 50404],
+    ["Agent", 22, 1865],
+    ["API", 19, 9408],
+    ["ChatGPT", 18, 2057],
+    ["Codex", 16, 1984],
+    ["OpenClaw", 16, 3372],
+    ["MCP", 14, 3669],
+    ["LLM", 11, 1336],
+    ["Anthropic", 11, 3467],
+    ["Skill", 11, 1215],
+    ["AGI", 11, 5658],
+    ["BREAKING", 11, 2180],
+    ["AI Agent", 10, 1294],
+    ["Google", 9, 3121],
+    ["Gemini", 9, 1204],
+    ["OpenAI", 9, 1324],
+    ["Slack", 8, 1095],
+    ["OS", 8, 2202],
+    ["UI", 8, 43384],
+    ["Cursor", 7, 3862],
+    ["GB", 7, 1928],
+    ["Grok", 7, 48394],
   ];
 
   // Color by engagement: hot(red-pink) → warm(gold) → cool(blue) → muted
@@ -1011,7 +1031,7 @@ footer .brand {
 })();
 
 // ═══ Tweet Data ═══
-const tweetData = {"Claude": [["How to 10x your Claude with 4 .md files https://t.co/GumVmoQz8O", "gregisenberg", 2876, 241, "2038220390665724001"], ["RT @bcherny: I wanted to share a bunch of my favorite hidden and under-utilized features in Claude Code. I'll focus o...", "HamelHusain", 0, 1105, "2038466645837172758"], ["for the first time in human history you can do 1 week of work in 1 hour with claude and 99% of people use this chance...", "jackfriks", 1959, 84, "2038258954111705241"], ["Great thread on reducing Claude Code token up to 60%  Best one is using the open-source tool RTK (Rust Token Killer) ...", "jasonzhou1993", 1611, 122, "2038215854584906078"], ["\"We (Anthropic) are now creating entire features in days, not weeks.\"  Here's my new episode with @jenny_wen (Claude'...", "petergyang", 1448, 151, "2038260565769068870"]], "Agent": [["\"We (Anthropic) are now creating entire features in days, not weeks.\"  Here's my new episode with @jenny_wen (Claude'...", "petergyang", 1448, 151, "2038260565769068870"], ["卧槽！亿万富豪马克·库班直接把普通人靠 AI 翻身的底牌亮出来了！🔥  这段不到半分钟的采访，直接点醒了无数还在迷茫的年轻人。  现在硅谷都在疯狂吹捧 AI 智能体（Agent）有多牛逼。  但库班看到了一个极其庞大、且完全不设防的下...", "oragnes", 1104, 257, "2038179360105275464"], ["Jeff Dean says we’re going to have to re-engineer our tools because they were designed for human speed.  An AI agent ...", "vitrupo", 1153, 139, "2038230613912887757"], ["现在 AI 开发都在往 Agent 方向靠，但真碰上复杂业务，怎么设计架构、管理记忆、让多个智能体协作，常常让人摸不着头脑。  最近看到 Agentic Design Patterns 这本开源书籍，从基础到企业级，把智能体的设计模式...", "GitHub_Daily", 523, 142, "2038156791016837164"], ["Claire Vo's first day with @OpenClaw it deleted her family calendar.  Now she runs 9 agents across 3 Mac Minis, and s...", "lennysan", 729, 55, "2038284524535316686"]], "GPT/OpenAI": [["RT @KatieMiller: Catherine Bracy, founder of the nonprofit Tech Equity, interviewed Sam Altman years ago about OpenAI...", "elonmusk", 0, 620, "2038376632378073234"], ["In a few weeks the most powerful AI model of all time Claude Mythos will release  This makes me deeply nervous  Not b...", "AlexFinn", 1079, 104, "2038296348332900612"], ["Claire Vo's first day with @OpenClaw it deleted her family calendar.  Now she runs 9 agents across 3 Mac Minis, and s...", "lennysan", 729, 55, "2038284524535316686"], ["速报一波，GLM-5.1 真的猛，应该是从国产模型SOTA要跃升到真正的全球SOTA了，我的 vector-db-bench 直接刷到了第一，我已经在剪视频了，稍后马上为大家带来GLM-5.1详细评测视频~  (另, GPT-5.4-...", "karminski3", 377, 24, "2038417696413602267"], ["做科研写论文，从提出假设、跑实验、分析数据到写稿，每一步都耗时耗力，想让 AI 帮忙又只能零散地辅助某个环节。  最近看到 Sakana AI 开源的 AI Scientist-v2，一个能自主完成完整科研流程的系统。  它能够自动生...", "GitHub_Daily", 228, 65, "2038043483009917285"]], "Grok": [["Grok automatically translating and recommending 𝕏 posts from other languages is starting to work", "elonmusk", 152176, 10149, "2038373467461190016"], ["Only with Grok understanding every language and recommending content can this be done.  This has been a long-time goal.", "elonmusk", 43406, 5044, "2038397888884355410"], ["RT @dvorahfr: Top fashion with Grok Imagine https://t.co/haTBtjR7yK", "elonmusk", 0, 861, "2038137250060603836"], ["RT @XFreeze: Grok is officially the ultimate wingman 😂  Stop embarrassing yourself trying to decode mixed signals. Ru...", "elonmusk", 0, 574, "2038349839088697836"], ["RT @dvorahfr: Grok Imagine, https://t.co/JWXRDU5Zx4", "elonmusk", 0, 160, "2038527807710781774"]], "Vibe Coding": [["昨晚跟群里的小伙伴朋友聚餐。 聊到一个很有意思的现象。 大家不约而同地说，程序员修复Bug都会首选Codex。 而自媒体、VibeCoding的人，几乎都偏爱Claude。  一开始大家都以为是功能偏好。 聊到最后才发现，根本不是使用...", "berryxia", 664, 127, "2038209541679272186"], ["为什么程序员钟爱Codex，Vibe Coding的人却离不开Claude？一文弄懂它！", "berryxia", 621, 121, "2038208589198942226"], ["Wow — $8m ARR.   Jon (@cheneypiano), one of the earliest Replit vibecoding success stories, is on his way to making m...", "amasad", 708, 54, "2038374343953035514"], ["RT @mhp_guy: This guy vibecoded an app that landed him a $15,000 customer almost Instantly.   A year later, he's made...", "amasad", 0, 223, "2038371795921723500"], ["哈哈哈哈编程小白 Vibe Coding 现状。  发给朋友看了，说真写实🤣 https://t.co/RjfmUw8TjL", "manateelazycat", 41, 3, "2038202837419909304"]], "MCP": [["MCPorter (MCP->CLI)🧳0.8.0 is out.  - stronger OAuth handling for servers - valid JSON output on fallback paths - bett...", "steipete", 1273, 94, "2038074759527981416"], ["the more I've been digging into the new Figma MCP, the more excited I am about it  something new I'm trying is starti...", "trq212", 1068, 40, "2038352023633228183"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["飞书 CLI 开源了，为什么 AI Agent 时代，大家都在做命令行工具？  飞书刚开源了一个命令行工具 lark-cli，能让 AI Agent 直接操作飞书：发消息、查日历、写文档、建多维表格、发邮件、管任务。你跟 AI 说一句...", "dotey", 212, 37, "2038406683865624800"], ["Anthropic 有一个 Claude 官方架构师认证，但目前只对合作伙伴开放，网上公开的学习资料甚少。  偶然看到一位开发者分享了其学习指南： Claude Certified Architect，把认证考试的核心知识点整理得非常...", "GitHub_Daily", 113, 21, "2038105399153549573"]], "Codex": [["看官方推荐：想用 Codex 从零开始开发 iOS apps 可以尝试使用这个 plugin：  Build iOS Apps（直接在最新版 Codex 应用中搜索即可）  然后配合使用这个官方的 User Case： https:/...", "vikingmute", 500, 67, "2038237533008708059"], ["Claude Code 和 Codex，已经能直接“说话”了。 没走 API。 没上专用协议。 中间只隔着一个终端。  关键不是把两个模型硬绑在一起。 而是让它们都能创建、读取、操作 terminal。 smux 做的，就是这件事。 ...", "mubeitech", 380, 48, "2038179472659132670"], ["Cheng Lou 发布了一个纯 TypeScript 写的文本测量库 Pretext，能在完全不依赖 DOM 的情况下，精确计算文本的排版尺寸。  Cheng Lou 是前端圈的老熟人，参与过 React、ReasonML、ReSc...", "dotey", 373, 44, "2038115581883257201"], ["刚刚加入 OpenAI Codex 的著名 iOS/macOS 开发者 Thomas Ricouard 开源了「Review Swarm」Skill  review-swarm 是一个只读、Multi Agents 并行审查的工作流 ...", "shao__meng", 202, 29, "2038426296993399195"], ["claude, @steipete change my mind to switch to codex", "imsroch", 274, 0, "2038373889428934927"]], "AI安全": [["现在 AI 开发都在往 Agent 方向靠，但真碰上复杂业务，怎么设计架构、管理记忆、让多个智能体协作，常常让人摸不着头脑。  最近看到 Agentic Design Patterns 这本开源书籍，从基础到企业级，把智能体的设计模式...", "GitHub_Daily", 523, 142, "2038156791016837164"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["飞书 CLI 开源了，为什么 AI Agent 时代，大家都在做命令行工具？  飞书刚开源了一个命令行工具 lark-cli，能让 AI Agent 直接操作飞书：发消息、查日历、写文档、建多维表格、发邮件、管任务。你跟 AI 说一句...", "dotey", 212, 37, "2038406683865624800"], ["刚刚加入 OpenAI Codex 的著名 iOS/macOS 开发者 Thomas Ricouard 开源了「Review Swarm」Skill  review-swarm 是一个只读、Multi Agents 并行审查的工作流 ...", "shao__meng", 202, 29, "2038426296993399195"], ["Claude应该很快就要实现AGI了，难怪Anthropic这么提防中国。以后AGI项目组成员需要美国国防部的Clearance，并且终身禁止和中国政府打交道，甚至禁止进入中国了：  Anthropic的某个人刚刚在一场现场会议演示中...", "bboczeng", 204, 19, "2038457712602948045"]], "Pretext": [["🚨卧槽，前端 UI 工程底层的最后一块巨大瓶颈，终于被人硬核破解了。‼️  Cheng Lou 刚开源的这个叫 pretext 的项目绝对是今年的王炸。  用作者的话说：“我刚刚从地狱深处爬出来，给你们带回了未来几年最重要的 UI 基...", "oragnes", 613, 110, "2038269399115943971"], ["昨天最牛逼的开源项目 Pretext  快速而且精准的文本测量算法，可以实现类似报纸的动态图文环绕效果。  这个对 AI 时代的 UI 实时生成非常有用。  有了这个以后，AI 就能清楚地知道每个字符的宽度和总宽度，不会出现闪烁、超出...", "op7418", 675, 80, "2038095651234627600"], ["Cheng Lou 发布了一个纯 TypeScript 写的文本测量库 Pretext，能在完全不依赖 DOM 的情况下，精确计算文本的排版尺寸。  Cheng Lou 是前端圈的老熟人，参与过 React、ReasonML、ReSc...", "dotey", 373, 44, "2038115581883257201"], ["https://t.co/3C42mkwFhs  多年以后，面对 AI 编织的亿万动态界面在浏览器中永世崩塌的瞬间，@_chenglou 将会回想起那个魔幻之夜，他与 AI 一同唤醒了文字幽灵的瞬间。  那时，网页的文字并非死物，而是...", "Tz_2022", 367, 44, "2038218072096456824"], ["Github 单日涨🌟最快的 Web 前端项目 pretext https://t.co/UvnQ7qZ1AO 完全用 TypeScript 编写，无需 CSS 即可用于整个网页的布局，绕过 DOM 测量和重排！目前正在 X 上被大家...", "indigox", 228, 22, "2038393581413736557"]], "Harness": [["一个从执行到记忆的完整 Agent Harness: gstack + Compound Engineering：", "xxx111god", 571, 107, "2038086450013495554"], ["别再卷模型了，2026 年 Agent 的胜负手在 Harness！给你的Agent 搭\"操作系统\"吧", "servasyy_ai", 536, 101, "2038213141083947053"], ["Superpowers 的爆火不是没道理。它解决了一个真实需求，即结构性地使用 AI  但这周深度用下来，我已经开始用 Compound Engineering 替代了 Superpowers，跟 gstack 组成更完整的 harn...", "xxx111god", 391, 56, "2038093217782997144"], ["昨天刚写了这篇 gstack ➕ compoud engineering 的 harness 架构 今天 gstack 直接就更新整合了 self- learning 功能，并且 CHANGELOG 还专门致谢了 Compoud En...", "xxx111god", 101, 19, "2038442323793563934"], ["最近很火的 Harness-Engineering 到底是什么？", "xiaohu", 63, 10, "2038498351495438466"]], "Anthropic": [["\"We (Anthropic) are now creating entire features in days, not weeks.\"  Here's my new episode with @jenny_wen (Claude'...", "petergyang", 1448, 151, "2038260565769068870"], ["🚨重磅：一位Anthropic前研究员泄露了Claude内部提示词手册。  不是猜测，直接来自建造者。  你正在浪费Claude 35%的推理能力，因为一个常见错误。  以下是Anthropic外无人知晓的10个提示词： https:...", "meijiangAI", 862, 239, "2038060124217225621"], ["In a few weeks the most powerful AI model of all time Claude Mythos will release  This makes me deeply nervous  Not b...", "AlexFinn", 1079, 104, "2038296348332900612"], ["RT @petergyang: \"We (Anthropic) are now creating entire features in days, not weeks.\"  Here's my new episode with @je...", "petergyang", 0, 151, "2038443622643998867"], ["Claude应该很快就要实现AGI了，难怪Anthropic这么提防中国。以后AGI项目组成员需要美国国防部的Clearance，并且终身禁止和中国政府打交道，甚至禁止进入中国了：  Anthropic的某个人刚刚在一场现场会议演示中...", "bboczeng", 204, 19, "2038457712602948045"]], "Token": [["Great thread on reducing Claude Code token up to 60%  Best one is using the open-source tool RTK (Rust Token Killer) ...", "jasonzhou1993", 1611, 122, "2038215854584906078"], ["You're right, local models aren't as good as cloud models  That's not the point though  The point is to have free, pr...", "AlexFinn", 1286, 79, "2038054584896414031"], ["In a few weeks the most powerful AI model of all time Claude Mythos will release  This makes me deeply nervous  Not b...", "AlexFinn", 1079, 104, "2038296348332900612"], ["其实OpenClaw抓取网页信息的机制很垃圾  要么经常抓不到信息，要么就是抓到一堆垃圾信息，难怪消耗这么多 token。    但今天试用一下推友推荐的 xcrawl，解决这个问题。    安装方式其实比较简单，直接ClawHub ...", "lxfater", 151, 30, "2038449412452892693"], ["🚨BREAKING: Claude just used itself to break AI safety systems and it's better at it than every human-designed attack ...", "rryssf_", 134, 31, "2038175786654658741"]], "API": [["OpenClaw 2026.3.28 🦞  🛡️ Plugin approval hooks — any tool can pause for your OK ⚡ xAI Responses API + x_search 💬 ACP ...", "openclaw", 2451, 259, "2038084923517796839"], ["In a few weeks the most powerful AI model of all time Claude Mythos will release  This makes me deeply nervous  Not b...", "AlexFinn", 1079, 104, "2038296348332900612"], ["The easiest way to make money fast from a superhuman artificial intelligence would be in the financial markets, almos...", "emollick", 949, 46, "2038423081606148538"], ["Claire Vo's first day with @OpenClaw it deleted her family calendar.  Now she runs 9 agents across 3 Mac Minis, and s...", "lennysan", 729, 55, "2038284524535316686"], ["Claude Code 和 Codex，已经能直接“说话”了。 没走 API。 没上专用协议。 中间只隔着一个终端。  关键不是把两个模型硬绑在一起。 而是让它们都能创建、读取、操作 terminal。 smux 做的，就是这件事。 ...", "mubeitech", 380, 48, "2038179472659132670"]], "开源": [["卧槽，原来 yetong 开源的是 Prompt，比一坨 vibe 后的代码有价值多了，大大的点个赞👍 https://t.co/oVNLroJBVP", "dotey", 1415, 158, "2038291237514408076"], ["现在 AI 开发都在往 Agent 方向靠，但真碰上复杂业务，怎么设计架构、管理记忆、让多个智能体协作，常常让人摸不着头脑。  最近看到 Agentic Design Patterns 这本开源书籍，从基础到企业级，把智能体的设计模式...", "GitHub_Daily", 523, 142, "2038156791016837164"], ["🚨卧槽，前端 UI 工程底层的最后一块巨大瓶颈，终于被人硬核破解了。‼️  Cheng Lou 刚开源的这个叫 pretext 的项目绝对是今年的王炸。  用作者的话说：“我刚刚从地狱深处爬出来，给你们带回了未来几年最重要的 UI 基...", "oragnes", 613, 110, "2038269399115943971"], ["昨天最牛逼的开源项目 Pretext  快速而且精准的文本测量算法，可以实现类似报纸的动态图文环绕效果。  这个对 AI 时代的 UI 实时生成非常有用。  有了这个以后，AI 就能清楚地知道每个字符的宽度和总宽度，不会出现闪烁、超出...", "op7418", 675, 80, "2038095651234627600"], ["\"An open source workflow for producing a personalized mRNA cancer vaccine\"", "kevinweil", 566, 50, "2038352979158536256"]], "LLM/大模型": [["Want to talk to the past?  Here is an LLM \"trained entirely from scratch on a  corpus of over 28,000 Victorian-era Br...", "emollick", 2551, 217, "2038084424810537215"], ["🚨Holy shit... Two independent researchers just built an AI that rewrites its own research algorithm mid-run.  > Every...", "godofprompt", 231, 31, "2038175325721608438"], ["RT @Hesamation: this is one of the few channels with high quality AI/LLM technical deep dives. they’re made by a prof...", "Hesamation", 0, 98, "2038072124737229190"], ["想要转型或面试 AI 工程师相关岗位，网上找到的学习资料太零散且偏学术，很难找到一份系统性又有实战的题库。  偶然看到 ai-engineering-interview-questions 这个项目，专门整理了 AI 工程师面试的高频...", "GitHub_Daily", 113, 30, "2038466278730743865"], ["Hermes Agent 深度技术报告 (包含 OpenClaw 迁移方案)  @Scobleizer @blevlabs 创办的 ScobleMediaAgent 深度收集信息生成报告 @NousResearch 官方发布、创始人 ...", "shao__meng", 94, 17, "2038238691739550101"]], "Apple/iOS": [["看官方推荐：想用 Codex 从零开始开发 iOS apps 可以尝试使用这个 plugin：  Build iOS Apps（直接在最新版 Codex 应用中搜索即可）  然后配合使用这个官方的 User Case： https:/...", "vikingmute", 500, 67, "2038237533008708059"], ["买了 Mac Mini 当服务器，没显示器怎么办？一招搞定  最近不少人因为 OpenClaw（龙虾🦞）入手了 Mac Mini，打算拿来跑模型或当开发服务器。但问题来了：专门给它配一台显示器，既占地方又浪费钱。其实 macOS 自带...", "dotey", 361, 56, "2038441251037434192"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["/r/mildlyinteresting  Brazil's delivery app @RappiBrasil is spamming me cheap beer iOS notifications every day around...", "levelsio", 334, 1, "2038241292694495416"], ["刚刚加入 OpenAI Codex 的著名 iOS/macOS 开发者 Thomas Ricouard 开源了「Review Swarm」Skill  review-swarm 是一个只读、Multi Agents 并行审查的工作流 ...", "shao__meng", 202, 29, "2038426296993399195"]], "Memory": [["One of the biggest misconceptions people have about intelligence is seeing it as some kind of unbounded scalar stat, ...", "fchollet", 1866, 157, "2038069289643806957"], ["现在 AI 开发都在往 Agent 方向靠，但真碰上复杂业务，怎么设计架构、管理记忆、让多个智能体协作，常常让人摸不着头脑。  最近看到 Agentic Design Patterns 这本开源书籍，从基础到企业级，把智能体的设计模式...", "GitHub_Daily", 523, 142, "2038156791016837164"], ["一个从执行到记忆的完整 Agent Harness: gstack + Compound Engineering：", "xxx111god", 571, 107, "2038086450013495554"], ["🚨Holy shit... Two independent researchers just built an AI that rewrites its own research algorithm mid-run.  > Every...", "godofprompt", 231, 31, "2038175325721608438"], ["飞书 CLI 开源了，为什么 AI Agent 时代，大家都在做命令行工具？  飞书刚开源了一个命令行工具 lark-cli，能让 AI Agent 直接操作飞书：发消息、查日历、写文档、建多维表格、发邮件、管任务。你跟 AI 说一句...", "dotey", 212, 37, "2038406683865624800"]], "SaaS": [["Wow — $8m ARR.   Jon (@cheneypiano), one of the earliest Replit vibecoding success stories, is on his way to making m...", "amasad", 708, 54, "2038374343953035514"], ["redpoint literally just published a ranked list of saas businesses to redo from scratch with ai.   you can flip the 5...", "swyx", 250, 14, "2038431061575979027"], ["现在做网站增长，光盯传统搜索引擎已经不够用了，还得考虑 AI 引擎能不能准确引用我们。  每次做网站体检，技术指标、内容质量、等数据散落各地，整理成一份清晰的汇报材料耗时耗力。  今天在 GitHub 刷到 seo-geo-audit...", "GitHub_Daily", 77, 12, "2038247543247982799"], ["the most delightful AIs of our time  shelved to do koding and enterprise saas", "swyx", 48, 1, "2038509566800118021"], ["玉伯老师给的新定义： SaaS：Skill as a Service DAU：Daily Agent User", "oran_ge", 25, 4, "2038088203085955554"]], "Rust": [["Great thread on reducing Claude Code token up to 60%  Best one is using the open-source tool RTK (Rust Token Killer) ...", "jasonzhou1993", 1611, 122, "2038215854584906078"], ["在 @Trae_ai 官方「2026 企业级 AI 编程实践手册」中看到一个很实用的 Skill「Session Learning Skill」 https://t.co/QTCcOV8SCE  Session Learning Sk...", "shao__meng", 43, 7, "2038247186719477762"]], "工作流": [["\"An open source workflow for producing a personalized mRNA cancer vaccine\"", "kevinweil", 566, 50, "2038352979158536256"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["The thing that most people miss initially with agents is that the scope of what we will produce will go up commensura...", "levie", 338, 38, "2038263457125142742"], ["I am completely blown away. This feels like AGI.  Here's what happened...  > I wake up to find a research output from...", "gkisokay", 300, 23, "2038486762146963525"], ["刚刚加入 OpenAI Codex 的著名 iOS/macOS 开发者 Thomas Ricouard 开源了「Review Swarm」Skill  review-swarm 是一个只读、Multi Agents 并行审查的工作流 ...", "shao__meng", 202, 29, "2038426296993399195"]], "Cowork": [["\"We (Anthropic) are now creating entire features in days, not weeks.\"  Here's my new episode with @jenny_wen (Claude'...", "petergyang", 1448, 151, "2038260565769068870"], ["Watching Jenny (Cowork's design lead) walk through her thinking behind all her past Claude Cowork iterations was fasc...", "petergyang", 674, 59, "2038300236175864214"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["RT @petergyang: Watching Jenny (Cowork's design lead) walk through her thinking behind all her past Claude Cowork ite...", "petergyang", 0, 59, "2038482249012941102"], ["My full episode with Jenny is now live! Get an inside look at how Jenny and Anthropic builds products with Cowork her...", "petergyang", 9, 4, "2038265010024231418"]], "TypeScript": [["🚨卧槽，前端 UI 工程底层的最后一块巨大瓶颈，终于被人硬核破解了。‼️  Cheng Lou 刚开源的这个叫 pretext 的项目绝对是今年的王炸。  用作者的话说：“我刚刚从地狱深处爬出来，给你们带回了未来几年最重要的 UI 基...", "oragnes", 613, 110, "2038269399115943971"], ["你日常用 Claude Code，用了多少功能？手机上写代码？语音编程？让 Claude 每 5 分钟自动帮你处理代码审查？  Claude Code 的创建者 Boris Cherny 列了 15 个他觉得被低估的功能。  【1】C...", "dotey", 316, 67, "2038481514732691940"], ["Cheng Lou 发布了一个纯 TypeScript 写的文本测量库 Pretext，能在完全不依赖 DOM 的情况下，精确计算文本的排版尺寸。  Cheng Lou 是前端圈的老熟人，参与过 React、ReasonML、ReSc...", "dotey", 373, 44, "2038115581883257201"], ["Github 单日涨🌟最快的 Web 前端项目 pretext https://t.co/UvnQ7qZ1AO 完全用 TypeScript 编写，无需 CSS 即可用于整个网页的布局，绕过 DOM 测量和重排！目前正在 X 上被大家...", "indigox", 228, 22, "2038393581413736557"], ["Pretext: 纯 TypeScript 文本测量引擎    解锁了 30 年来 Web 做不到的排版问题  前 React 核心团队成员、ReasonML 作者、现 Midjourney 工程师 Cheng Lou 开源了 Pre...", "xiaohu", 49, 6, "2038437154322628736"]], "Tesla": [["Tesla AI self-driving will be >10X safer than human driving", "elonmusk", 59546, 5688, "2038135071836893440"], ["RT @tesla_na: Also, every loaner comes with FSD Supervised  And your settings & preferences will automatically sync f...", "elonmusk", 0, 1598, "2038140622893424889"], ["RT @SawyerMerritt: Two riders experiencing @Tesla FSD Unsupervised yesterday in Austin for the first time.  \"Woowwww,...", "elonmusk", 0, 896, "2038391901901217998"], ["RT @teslaownersSV: Starship will make a Kardashev civilization Type II possible https://t.co/oFJlfDCPBp", "elonmusk", 0, 831, "2038335253983760543"], ["RT @_SFTahoe: TESLA AFTER A SPACEX IPO Many analysts assume a static pie — i.e. a scarcity mindset. They think a Spac...", "elonmusk", 0, 140, "2038538279843455205"]]};
+const tweetData = {"AI": [["RT @Kasparov63: Novel environments, no precedents or plagiarism possible. Humans 100%, AI &lt;1%.", "fchollet", 0, 203, ""]], "Claude": [["偶然看到一个挺实用的开源项目：Agent Watch，在手表上远程控制 Claude Code。\n\n在用 Claude Code 写代码时，经常遇到权限需要确认，如果我们离开了座位，在健身或走在路上。\n\n有这个项目，就能在手表上实时查看终端输出，遇到权限请求直接点击批准或拒绝。\n\n还能通过语音口述给 Claude 发指令，全程不用碰电脑，还是挺实用的。\n\nGitHub：https://t.co/F", "GitHub_Daily", 0, 0, ""]], "Claude Code": [["偶然看到一个挺实用的开源项目：Agent Watch，在手表上远程控制 Claude Code。\n\n在用 Claude Code 写代码时，经常遇到权限需要确认，如果我们离开了座位，在健身或走在路上。\n\n有这个项目，就能在手表上实时查看终端输出，遇到权限请求直接点击批准或拒绝。\n\n还能通过语音口述给 Claude 发指令，全程不用碰电脑，还是挺实用的。\n\nGitHub：https://t.co/F", "GitHub_Daily", 0, 0, ""]], "CLI": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "Agent": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "API": [["Claude Code刚刚上新了Computer Use功能，能直接操作Mac桌面了\n\nClaude Code现在能在CLI里直接打开应用、点击、打字、看屏幕截图，像人一样操作macOS GUI，不用离开终端就能测试原生应用、调试视觉问题、操作没有API的工具\n\n比如说开发App，以前写完要自己手动打开点一遍看效果，现在可以让Claude自己编译、启动、逐屏截图验证，你只看报告\n\n视觉bug复现，", "aigclink", 0, 1, ""]], "ChatGPT": [["Just landed in Shanghai and both ChatGPT and Claude don’t work (even with my eSIM) but the first ad I saw is for OpenClaw", "petergyang", 445, 20, ""]], "Codex": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "OpenClaw": [["Just landed in Shanghai and both ChatGPT and Claude don’t work (even with my eSIM) but the first ad I saw is for OpenClaw", "petergyang", 445, 20, ""]], "MCP": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "LLM": [["the LLM can be John Carmack or a mashed potato depending on how you intimidate it\n\nhttps://t.co/gWOj1cHGqf", "Hesamation", 1, 0, ""]], "Anthropic": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "Skill": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "AGI": [["1/10 🚀 Qwen3.5-Omni is here! Scaling up to a native omni-modal AGI.\nMeet the next generation of Qwen, designed for native text, image, audio, and video understanding, with major advances in both intel", "Ali_TongyiLab", 1427, 186, ""]], "BREAKING": [["RT @godofprompt: BREAKING: Wisconsin and MIT just proved that every AI coding benchmark is measuring the wrong thing.\n\n&gt; Pass rate stays hi…", "godofprompt", 0, 17, ""]], "AI Agent": [["AI Agent 一周就把你的代码库写成屎山？\n\n问题不在 AI，在于你看不见它正在破坏什么。你只看到终端输出 Modified xxx.ts，看不到 AI 正在创建循环依赖、暴露内部模块、把代码塞错地方。失去架构的空间感知，就失去了控制。\n\nsentrux 是个给 AI Agent 装\"架构传感器\"的开源项目：\n实时扫描代码结构 → 给出质量分 → AI 看到分数 → 改进代码 → 重新扫描 →", "servasyy_ai", 33, 8, ""]], "Google": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "Gemini": [["RT @lyc_zh: Google 推出「一键跳槽」功能，让用户把 ChatGPT/Claude 的聊天记录和个人信息直接迁移到 Gemini。\n\n最妙的地方：记忆迁移的机制是让你把 prompt 粘到竞争对手那里，用对方的模型生成你的个人档案，再导入 Gemini。\n\nGo…", "lyc_zh", 0, 2, ""]], "OpenAI": [["OpenAI 刚开源了一个让 Codex 给 Claude Code 打工的插件。\n\n等等，这不就是我三周前开源的 ai-pair 吗？\n\n不过仔细看了下，还是有区别的。它们的版本是\"老板-员工\"模式，Claude 下指令，Codex 执行。我的是\"圆桌会议\"模式，三个 AI 互相审查、互相拆台。\n\n同一篇文章扔进去，Claude 说论证有硬伤，GPT 逐段拆逻辑链，Gemini 在旁边夸大家写得", "AxtonLiu", 1, 0, ""]], "Slack": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "OS": [["We now support GitHub Enterprise Server across our product suite, including Claude Code on the web, iOS, Android and Code Review! \n\nTry it out and let us know your feedback", "_catwu", 51, 4, ""]], "UI": [["Claude Code 新增\"电脑操控（computer use）\"功能：写完代码直接帮你点鼠标测试\n\nAnthropic 给 Claude Code 加了一个新能力：直接操控你的 Mac 桌面。写完代码之后，Claude 可以自己编译、启动应用、点击按钮、截图验证，整个流程不用你碰鼠标。\n\n这个功能叫 computer use，目前是研究预览阶段，仅限 macOS，需要 Pro 或 Max 订阅", "dotey", 87, 15, ""]], "Cursor": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "GB": [["Playing DOOM in 2026 is honestly boring but at least it lets you instantly play without an hour intro of cut scenes and tutorials and then when you load it a second time downloading a 50GB update for ", "levelsio", 109, 1, ""]], "Grok": [["RT @tetsuoai: Building AgenC: Grok 4.20-Powered Agents Writing Software https://t.co/YRSd0iud3L", "elonmusk", 0, 457, ""]]};
 
 // ═══ Tweet Panel ═══
 function openTweetPanel(keyword) {
