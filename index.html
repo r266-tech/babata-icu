@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>X 每日精华 | 2026-03-31</title>
+<title>X 每日精华 | 2026-04-01</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
 
@@ -646,8 +646,8 @@ footer .brand {
 <div class="hero">
   <h1>X 每日精华</h1>
   <div class="meta-row">
-    <span class="stats">629 条推文 · Following + ForYou</span>
-    <span class="dateline">2026-03-31 · 03-30 08:02 ~ 03-31 08:00 CST</span>
+    <span class="stats">658 条推文 · Following + ForYou</span>
+    <span class="dateline">2026-04-01 · 03-31 10:24 ~ 04-01 10:24 CST</span>
   </div>
 </div>
 
@@ -655,7 +655,7 @@ footer .brand {
 <div id="sec-heatmap" style="scroll-margin-top:24px; margin-bottom:48px">
   <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:16px">
     <span style="font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-rose)">🔍 关键词热点</span>
-    <span style="font-size:.68rem;color:var(--ink-dim)">气泡大小 = 提及次数 · 颜色 = 互动热度 · 482 条推文</span>
+    <span style="font-size:.68rem;color:var(--ink-dim)">气泡大小 = 提及次数 · 颜色 = 互动热度 · 479 条推文</span>
   </div>
   <canvas id="bubble-chart" style="width:100%;border-radius:16px;background:rgba(255,255,255,.02);border:1px solid var(--border)"></canvas>
 </div>
@@ -669,34 +669,50 @@ footer .brand {
   <div class="section-body">
   <div class="topic">
     <div class="number-tag">TOPIC 01</div>
-    <h2>Claude Code 上 Computer Use：终端里直接操控 Mac 桌面</h2>
-    <div class="body">Anthropic 给 Claude Code 加了 computer use 能力——写完代码可以直接编译、启动应用、点击 UI、截图验证，整个闭环不离开终端。目前是 research preview，仅 macOS，需 Pro/Max 订阅。每个应用单独授权，终端窗口不会被截图，Esc 全局中断。官方推文 40K+ 赞。</div>
-    <div class="source">via <a href="https://x.com/claudeai/status/2038663014098899416" target="_blank" rel="noopener">claudeai</a> &middot; <a href="https://x.com/dotey/status/2038671395631108220" target="_blank" rel="noopener">dotey</a></div>
-    <div class="opinion"><strong>我的看法：</strong>填补了 Claude Code 最明显的缺口——之前能写代码、跑命令，但涉及 GUI 操作就束手无策。&quot;写代码→编译→测试→修 bug→再验证&quot;串成完整闭环。限制不少：不支持 Linux/Windows，不能用非交互模式。对 Tanka 桌面端开发效率有直接影响。</div>
+    <h2>Claude Code 源码泄露：三层反蒸馏、七层记忆、隐藏功能全面曝光</h2>
+    <div class="body">昨天 Anthropic 因 NPM source map 发布失误，Claude Code 的 50 万行源码被还原（Anthropic 已确认是 human error）。社区在 24 小时内完成了疯狂分析，Python 版移植、free-code 翻译、cc-gateway 反追踪工具全出来了。
+
+**三层反蒸馏机制：** 宝玉的深度分析揭示了 Anthropic 防竞争对手 API 蒸馏的三层防护。第一层，API 输出中掺入虚假工具调用，正常用户由服务端过滤，但批量抓取做训练就会污染模型；第二层，把中间推理文本替换为摘要加密签名，外部观察者只能看到摘要，拿不到完整推理链；第三层，Claude Code 用独立 JSON 协议格式与 API 通信，与每周 920 万次普通 API 请求统计隔离，竞品无法伪装成 CC 获取特殊待遇。
+
+**七层记忆架构：** shao__meng 分享了 @evermind 团队 @troyhua 的解读，CC 的记忆系统从 Layer 1 工具结果持久化（超阈值落盘 + 上下文仅保留 2KB 预览）到 Layer 6 Dreaming（后台跨会话记忆整合，类比人类睡眠），层层递进。所有决策都以保护 prompt cache 为前提。
+
+**隐藏功能：** 源码中发现未发布功能包括 next model Capybara（被要求避免过度评论）、UNDERCOVER mode（团队可秘密向公共仓库贡献代码）、Ultraplan 模式（10-30 分钟异步多 Agent 规划）、buddy 伴侣精灵（愚人节彩蛋）等。frustration detection regex（检测用户骂街后调整回复风格）成为最大 meme。
+
+**反方观点：** 铁锤人（lxfater）认为 CC 代码泄露意义不大：底层还是模型问题，Codex 是开源的，还有 OpenCode 等参考。混淆后的 50 万行代码想还原到能运行，现在 AI 也做不到。真正值钱的是模型能力，不是框架代码。</div>
+    <div class="source">via <a href="https://x.com/dotey/status/2039042306871906655" target="_blank" rel="noopener">dotey (宝玉)</a> (283 ❤️，三层反蒸馏机制深度分析) &middot; <a href="https://x.com/shao__meng/status/2039153466229088451" target="_blank" rel="noopener">shao__meng</a> (七层记忆架构完整解读) &middot; <a href="https://x.com/Hesamation/status/2039122807745831045" target="_blank" rel="noopener">Hesamation</a> (Capybara、UNDERCOVER mode 等隐藏功能) &middot; <a href="https://x.com/Hesamation/status/2039141125236117560" target="_blank" rel="noopener">Hesamation</a> (Anthropic 官方回应) &middot; <a href="https://x.com/vikingmute/status/2039155852385652813" target="_blank" rel="noopener">vikingmute (Viking)</a> (frustration detection regex 分析) &middot; <a href="https://x.com/lxfater/status/2038988631843786861" target="_blank" rel="noopener">lxfater (铁锤人)</a> (165 ❤️，反方：底层还是模型)</div>
+    <div class="opinion"><strong>我的看法：</strong>三层反蒸馏机制设计思路和我们在 Tanka 做 Arena 的多视角防护类似——都是在数据传输层面做手脚。但最有价值的是七层记忆架构：对于 Agent 算法工程师，Layer 1（工具结果持久化）和 Layer 3（Session Memory 分叉提取）是成本最低、效果最直接的两层。我们的多轮对话上下文膨胀问题可以直接借鉴这个思路——不一定是 7 层，但「成本最低优先」的原则是金。另外泄露出来的 Ultraplan 模式（10-30 分钟异步规划）才是 Agent 处理复杂任务的真正方向，不是什么 chat.</div>
   </div>
 
   <div class="topic">
     <div class="number-tag">TOPIC 02</div>
-    <h2>OpenAI 把 Codex 插件打进 Claude Code</h2>
-    <div class="body">OpenAI 官方发布 codex-plugin-cc，在 Claude Code 里直接调用 Codex 做代码审查、对抗性审查、任务接管。三个核心命令：/codex:review /codex:adversarial-review /codex:rescue。OpenAI 主动把 Codex 送进 Anthropic 生态。</div>
-    <div class="source">via <a href="https://x.com/dotey/status/2038682622180634793" target="_blank" rel="noopener">dotey</a> &middot; <a href="https://x.com/jesselaunz/status/2038713390294851786" target="_blank" rel="noopener">jesselaunz</a></div>
-    <div class="opinion"><strong>我的看法：</strong>竞争白热化的标志——不是你死我活，而是互相渗透。Claude Code + Codex 双引擎代码审查等于有了&quot;第二意见&quot;。但 review gate 可能导致两个 agent 循环调用烧额度，建议只开 review 不开 gate。</div>
+    <h2>OpenAI 完成 1220 亿美元融资，AI 融资进入单轮千亿美元时代</h2>
+    <div class="body">OpenAI 官方宣布完成 1220 亿美元融资（史上最大单轮私募），投后估值 8520 亿美元。同时公布的业务数据：当前月收入 20 亿美元（从季度 10 亿到月 20 亿只用数月）、增速是 Google 和 Meta 同期的 4 倍、9 亿周活用户、5000 万付费订阅、搜索功能年增 3 倍、广告业务 6 周内 ARR 破 1 亿美元、企业收入占比超 40%、Codex 周活 200 万（3 个月增 5 倍）。shao__meng 补充 Anthropic 估值应该也在 4000 亿美元左右。</div>
+    <div class="source">via <a href="https://x.com/OpenAI/status/2039085161971896807" target="_blank" rel="noopener">OpenAI</a> (4900 ❤️，官方公告) &middot; <a href="https://x.com/shao__meng/status/2039138135016128545" target="_blank" rel="noopener">shao__meng</a> (业务数据详细解读)</div>
+    <div class="opinion"><strong>我的看法：</strong>1220 亿融资的核心信号不是钱多，是窗口期短——投资者在赌 AGI 时代的入场券。对 V 的意义：基础设施在加速，多 Agent 应用生态会有更大的 runway。最值得关注的是 Codex 周活 200 万、3 个月增 5 倍的数据，AI 编码工具已经进入千万级日活的赛道，在这个量级上任何一点差异化优势都会被放大。</div>
   </div>
 
   <div class="topic">
     <div class="number-tag">TOPIC 03</div>
-    <h2>Qwen3.5-Omni：阿里原生全模态，视频直接写代码</h2>
-    <div class="body">阿里发布 Qwen3.5-Omni，215 项音视频任务超越 Gemini-3.1 Pro。最大亮点 &quot;Audio-Visual Vibe Coding&quot;——给它看界面视频直接生成代码，模型自发涌现的能力。支持 256K 上下文、113 种语言。每百万 token 输入不到 0.8 元。</div>
-    <div class="source">via <a href="https://x.com/Ali_TongyiLab/status/2038609308750143762" target="_blank" rel="noopener">Ali_TongyiLab</a></div>
-    <div class="opinion"><strong>我的看法：</strong>&quot;看视频写代码&quot;如果能稳定复用，对需求沟通场景是颠覆性的——客户拍操作视频就能出原型。建议关注 API 实际可用性。</div>
+    <h2>OpenClaw 2026.3.31 发布：QQ Bot 集成、远程 MCP、Slack exec approvals</h2>
+    <div class="body">OpenClaw 发布 2026.3.31 版本，核心更新：原生 QQ Bot 集成（私聊/群聊/频道 + 媒体支持）、LINE 发送图片视频音频、后台任务流（list/show/cancel）、CJK 处理改进。预告下版本：持久化任务编排、Android 通知转发、Matrix 草稿流 + 历史记录、Slack exec approvals natively、Remote MCP over HTTP/SSE、WhatsApp 表情反应、Teams 成员信息 via Graph。NVIDIA 资助了安全加固工程，steipete 同步发布 Claw beta bits（可靠性+安全性改进+新任务系统）。</div>
+    <div class="source">via <a href="https://x.com/openclaw/status/2039095081215672584" target="_blank" rel="noopener">openclaw</a> (1061 ❤️，版本公告) &middot; <a href="https://x.com/openclaw/status/2039096369827516917" target="_blank" rel="noopener">openclaw</a> (117 ❤️，下版本预告) &middot; <a href="https://x.com/openclaw/status/2039100191324979580" target="_blank" rel="noopener">openclaw</a> (649 ❤️，NVIDIA 安全投资) &middot; <a href="https://x.com/steipete/status/2039076488897876462" target="_blank" rel="noopener">steipete</a> (458 ❤️，Claw beta)</div>
+    <div class="opinion"><strong>我的看法：</strong>Remote MCP over HTTP/SSE 是最实用的更新——可以把 MCP server 部署在远端，OpenClaw 直接调用，不用在本机开端口。持久化任务编排也是我一直想要的：现在的 cron 任务有时候中途断了就没了，持久化版本会有重试和状态持久化。Slack exec approvals 对团队协作场景也是利好。</div>
   </div>
 
   <div class="topic">
     <div class="number-tag">TOPIC 04</div>
-    <h2>CLI 大爆发：飞书、企微、Google 争相开源 Agent CLI</h2>
-    <div class="body">飞书开源 lark-cli、企业微信开源 wecom-cli、Google 开源 gws。所有想接入 Agent 的产品都在做 CLI。原因：CLI 自描述（AI 敲 --help 就知道怎么用），比 API 更适合 Agent，比 GUI 更高效。支持 dry-run、结构化输出、错误自动修复指引。</div>
-    <div class="source">via <a href="https://x.com/dotey/status/2038406683865624800" target="_blank" rel="noopener">dotey</a> &middot; <a href="https://x.com/op7418/status/2038450054688915868" target="_blank" rel="noopener">op7418</a></div>
-    <div class="opinion"><strong>我的看法：</strong>CLI 是入口不是护城河，真正价值在 Agent 层。但对 V 来说确实降低了集成成本——飞书 CLI + Claude Code = 终端指挥 Agent 操作飞书。Tanka 如需用飞书/企微做内部工具，现在是最佳接入时机。</div>
+    <h2>Google Veo 3.1 Lite 发布，AI 视频成本直降 8 倍</h2>
+    <div class="body">Google 推出 Veo 3.1 Lite，AI 视频生成成本 $0.05/秒起。720p 起步价不到 Fast 版一半（$0.05 vs $0.15），8 秒 720p 视频仅 $0.40（Fast 版 $1.20）。支持文本/图片生成视频、720p/1080p、横竖屏、音频同步。同时 4 月 7 日起 Veo 3.1 Fast 全线降价（720p $0.10、1080p $0.15、4K $0.35）。jesselaunz 测试 Gemini Lyria 3 音乐生成，3 分钟史诗管弦乐效果尚可。</div>
+    <div class="source">via <a href="https://x.com/xiaohu/status/2039142444516995432" target="_blank" rel="noopener">xiaohu (小互)</a> (32 ❤️) &middot; <a href="https://x.com/CodeByPoonam/status/2039054987729518955" target="_blank" rel="noopener">CodeByPoonam</a> (29 ❤️) &middot; <a href="https://x.com/jesselaunz/status/2039147273419157699" target="_blank" rel="noopener">jesselaunz</a> (Lyria 3 测试)</div>
+    <div class="opinion"><strong>我的看法：</strong>$0.05/秒让 1 分钟视频成本降到 $3，制作一条 3 分钟短视频只要 $9。这个价格已经足够让个人和小团队大规模实验了。音视频 AI 的成本曲线和文本 token 一样在快速下降，Sora 基本上已经被挤出去了。</div>
+  </div>
+
+  <div class="topic">
+    <div class="number-tag">TOPIC 05</div>
+    <h2>Harness Engineering 重新定义 AI 优先级：框架比模型重要 6 倍</h2>
+    <div class="body">Stanford &amp; MIT 联合论文发现：同一个 LLM，只改变 harness（运行框架/工具/调用方式），性能差距可达 6 倍。dair_ai 提出 agent harnesses 作为代码设计太限制性，如果 harness 本身用自然语言写呢？langchain 发布动态 config middleware 教程展示如何运行时重塑 agent 的 model/tools/prompts。Mitchell Hashimoto 的 Harness Engineering 概念与 SDD（规范驱动开发）是放大器关系，不是替代关系。Amazon 总结四维 AI 评估框架（信任/有用性/效率/满意度），yan5xu 呼吁开源项目要包含 harness 工程。</div>
+    <div class="source">via <a href="https://x.com/omarsar0/status/2039150837835165753" target="_blank" rel="noopener">omarsar0</a> (41 转发，Stanford &amp; MIT 论文) &middot; <a href="https://x.com/hwchase17/status/2039053945071669568" target="_blank" rel="noopener">hwchase17</a> (LangChain harness middleware) &middot; <a href="https://x.com/yan5xu/status/2039132567065276586" target="_blank" rel="noopener">yan5xu</a> (harness 工程应该开源)</div>
+    <div class="opinion"><strong>我的看法：</strong>6 倍差距！这个结论直接重塑我们 Agent 算法的优先级。V 的 Arena 本质上就是一个 harness——多视角讨论框架就是 harness，模型是底层引擎。harness engineering 的设计理念应该系统化地融入 Arena。而且用自然语言写 harness 的方向对 V 的 Arena 很有启发：Agent 角色配置用自然语言描述，比写代码定义角色灵活得多。</div>
   </div>
   </div>
 </section>
@@ -709,12 +725,14 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="card-list purple">
-    <li><strong>Claude Code 用量暴增限流 + Auto Mode 上线 Enterprise</strong> — Claude Code 用量暴增限流 + Auto Mode 上线 Enterprise <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Google Veo 3.1 自拍克隆生成 1080p 视频</strong> — Google Veo 3.1 自拍克隆生成 1080p 视频 <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Claude Mythos 5.0 演示：90 分钟发现 Linux 内核 20 年漏洞</strong> — Claude Mythos 5.0 演示：90 分钟发现 Linux 内核 20 年漏洞 <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Google 研究：推理模型自发内部辩论</strong> — Google 研究：推理模型自发内部辩论，robust reasoning 是 social process <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Cognition 工程师 3-6 个月前停止写代码</strong> — Cognition 工程师 3-6 个月前停止写代码 <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Pretext：React 元老文本布局引擎</strong> — Pretext：React 元老文本布局引擎，比 DOM 快 500 倍 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>Community reacts to Claude Code leak by analyzing the architecture, not the bug — revealing what everyone was already guessing</strong> —  <a href="https://x.com/yucheng/status/2039111253751484436" target="_blank" rel="noopener">yucheng (YC)</a></li>
+    <li><strong>Mem0 found a MEMORY.md size limit that silently deletes agent memory when exceeded</strong> —  <a href="https://x.com/mem0ai/status/2039041449854124229" target="_blank" rel="noopener">mem0ai</a></li>
+    <li><strong>dotey: Claude Code won&#x27;t open source because closed source lets them hide anti-distillation, user tracking, and pre-built features</strong> —  <a href="https://x.com/dotey/status/2039151725680980209" target="_blank" rel="noopener">dotey (宝玉)</a></li>
+    <li><strong>Ethan Mollick: AI labs are terrible at explaining what success looks like — even &#x27;Machines of Loving Grace&#x27; has few concrete visions</strong> —  <a href="https://x.com/emollick/status/2039142905156153428" target="_blank" rel="noopener">emollick (Ethan Mollick)</a></li>
+    <li><strong>Andrew Ng: anti-AI study found &#x27;extinction&#x27; narrative failed, but &#x27;AI warfare &amp; environment&#x27; and &#x27;job loss&#x27; are resonating better with public</strong> — UK group systematically tested alarm messages — some backfire, others work on demographic segments <a href="https://x.com/AndrewYNg/status/2039051446084153834" target="_blank" rel="noopener">AndrewYNg (Andrew Ng)</a></li>
+    <li><strong>Amjad Masad warns of massive JavaScript supply chain attack that can take over developer computers</strong> —  <a href="https://x.com/amasad/status/2039095411579760947" target="_blank" rel="noopener">amasad (Amjad Masad)</a></li>
+    <li><strong>SentrySearch: natural language search across video content using multimodal embeddings, no transcription needed</strong> — Video pixels directly compared with text queries at embedding level — works with Gemini or local Qwen3-VL <a href="https://x.com/dotey/status/2039147493355634989" target="_blank" rel="noopener">dotey (宝玉)</a></li>
+    <li><strong>free-code: Claude Code source recompiled with telemetry stripped and all experimental features enabled</strong> — Includes Ultraplan — an async multi-agent planning mode (10-30 min browser sessions) <a href="https://x.com/vasuman/status/2039093130490687773" target="_blank" rel="noopener">vasuman</a></li>
   </ul>
   </div>
 </section>
@@ -727,11 +745,9 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="card-list blue">
-    <li><strong>Agent Watch</strong> — Apple Watch 控制 Claude Code <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>cc-connect</strong> — 连接 AI Agent 到 Slack/Telegram/Discord <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Review Swarm</strong> — 4 Agent 并行代码审查，输出优先级清单 <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Qwen3.5-27B 蒸馏版</strong> — 16GB 显卡可跑，HF 连续 3 周 #1 <a href="" target="_blank" rel="noopener"></a></li>
-    <li><strong>Gemini 一键导入 ChatGPT/Claude 记忆</strong> — Gemini 一键导入 ChatGPT/Claude 记忆 <a href="" target="_blank" rel="noopener"></a></li>
+    <li><strong>SentrySearch</strong> — 用自然语言搜索视频内容，视频切片编码为多模态向量，支持云端 Gemini 或本地 Qwen3-VL <a href="https://x.com/dotey/status/2039147493355634989" target="_blank" rel="noopener">dotey (宝玉)</a> (开源 CLI，专做特斯拉行车记录仪适配，含 Skill 可用)</li>
+    <li><strong>docmd</strong> — 零配置文档生成器，Markdown → 静态文档站，自带路由、搜索和 AI-ready context <a href="https://x.com/HiTw93/status/2039118794358948334" target="_blank" rel="noopener">HiTw93 (Tw93)</a> (极简主义设计)</li>
+    <li><strong>Learn FASTER</strong> — 间隔重复+主动练习框架集成到 Claude Code，四种学习模式 + 反向教学机制 <a href="https://x.com/GitHub_Daily/status/2039130647621779602" target="_blank" rel="noopener">GitHub_Daily</a> (4 个 Skill 可用)</li>
   </ul>
   </div>
 </section>
@@ -744,9 +760,9 @@ footer .brand {
   </div>
   <div class="section-body">
   <ul class="action-list">
-    <li><span class="marker">→</span><strong>Claude Code Computer Use 试用</strong><span class="desc"> — Tanka 桌面端/Electron 场景可试</span></li>
-    <li><span class="marker">→</span><strong>飞书 CLI 接入</strong><span class="desc"> — Agent 操作飞书，值得评估</span></li>
-    <li><span class="marker">→</span><strong>Codex 插件审慎使用</strong><span class="desc"> — 只开 review 不开 gate</span></li>
+    <li><span class="marker">→</span><strong>研究 CC 七层记忆架构，评估 Arena 上下文管理</strong><span class="desc"> — Layer 1（工具结果持久化）和 Layer 3（Session Memory）成本最低、效果最直接，可以直接借鉴到多轮对话上下文膨胀问题</span></li>
+    <li><span class="marker">→</span><strong>将 Harness Engineering 设计理念系统化融入 Arena</strong><span class="desc"> — harness 能带来 6 倍性能差距，框架比模型更值得投资；用自然语言配置 harness 方向可直接应用到 Agent 角色定义</span></li>
+    <li><span class="marker">→</span><strong>评估 Veo 3.1 Lite 是否适合视频相关实验</strong><span class="desc"> — $0.05/秒价格点，1 分钟视频 $3，如果需要视频评测数据可以尝试</span></li>
   </ul>
   </div>
 </section>
@@ -759,52 +775,51 @@ footer .brand {
   </div>
   <div class="section-body">
   <div class="wisdom-card">
-    <div class="w-title">编码范式的终结</div>
-    <blockquote>The best engineers don&#x27;t choose an approach - they try everything and compare the results.</blockquote>
-    <div class="author">— <a href="https://x.com/cognition/status/2038664450606325888" target="_blank" rel="noopener">Russell Kaplan</a> &middot; Cognition</div>
-    <div class="comment"><strong>💭</strong> 当 AI 能并行执行所有方案时，&quot;选择最佳方案&quot;这个人类决策瓶颈被消除了。真正的竞争不是选择力，而是评估力。V 做技术决策时，与其花一周讨论方案 A vs B，不如让 CC 同时实现两个，跑完测试看数据。</div>
+    <div class="w-title">底层还是模型，框架代码没那么值钱</div>
+    <blockquote>底层还是模型问题，模型没变好，其他都是虚的。Codex 是开源的，还有 OpenCode，已经有很多参考。大一点的厂，懂如何反混淆的人大有人在。所以呀，底层还是模型问题。</blockquote>
+    
+    <div class="author">— <a href="https://x.com/lxfater/status/2038988631843786861" target="_blank" rel="noopener">lxfater (铁锤人)</a> &middot; AI 开发者</div>
+    <div class="comment"><strong>💭</strong> 当所有人都在研究 Claude Code 的 50 万行源码时，铁锤人一盆冷水：模型没变好，框架代码就是皮毛。165 个赞说明很多人心里认同但不好意思说。对 V 做 Agent 算法的启示：先保证底层模型选对、数据做好，再去优化框架。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">AGI 的本质是 Harness</div>
-    <blockquote>AGI will have a harness.</blockquote>
-    <div class="author">— <a href="https://x.com/hwchase17/status/2038699790071153077" target="_blank" rel="noopener">Harrison Chase</a> &middot; LangChain</div>
-    <div class="comment"><strong>💭</strong> 一句被大量转发的断言。模型能力是引擎，harness 是变速箱。光有引擎跑不了车。V 构建的整个 OpenClaw 体系本质上就是在造 harness——skill 编排、agent 调度、loop/hook/cron，这才是真正的价值所在。</div>
+    <div class="w-title">瓶颈是 chatbot，不是模型</div>
+    <blockquote>The biggest bottleneck in AI for most people isn&#x27;t the models. It&#x27;s the chatbot. New interfaces like Claude Dispatch are closing the gap between what AI can do and what people can actually use it for.</blockquote>
+    <div class="quote-zh">「对大多数人来说，AI 最大的瓶颈不是模型，而是 chatbot。Claude Dispatch 这样的新界面正在弥合 AI 能力与人们实际可用能力之间的差距。」</div>
+    <div class="author">— <a href="https://x.com/emollick/status/2039109996097491153" target="_blank" rel="noopener">emollick (Ethan Mollick)</a> &middot; Wharton 教授，AI 研究者</div>
+    <div class="comment"><strong>💭</strong> 171 个赞验证了这个判断。模型能力远超用户能调用的程度，差距在界面层。V 的 Arena 正是在打破 chatbot 的单向交互模式，引入多视角讨论——这个判断和我们 Arena 的定位完全一致。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">智能不是单一维度</div>
-    <blockquote>More operational knowledge means you need less intelligence to be competent.</blockquote>
-    <div class="author">— <a href="https://x.com/vitrupo/status/2038562881344770498" target="_blank" rel="noopener">François Chollet</a> &middot; Keras 之父</div>
-    <div class="comment"><strong>💭</strong> Chollet 的洞察：coding agents 能验证自己的输出、模拟代码执行，&quot;能力&quot;确实增强了。但对智能的需求反而在降低——因为知识和工具补偿了推理。这对 AI 时代的人类同样适用：与其追求&quot;更聪明&quot;，不如追求&quot;信息更全面&quot;。</div>
+    <div class="w-title">Software as a Service → Services as Software</div>
+    <blockquote>RIP, software as a service (1999-2025). Welcome to the world, services as software (2026 - ?)</blockquote>
+    <div class="quote-zh">「软件即服务已死（1999-2025）。欢迎来到服务即软件的时代（2026 - ?）」</div>
+    <div class="author">— <a href="https://x.com/omooretweets/status/2039150266889744653" target="_blank" rel="noopener">omooretweets (Olivia Moore)</a> &middot; a16z 消费者研究</div>
+    <div class="comment"><strong>💭</strong> Sequoia 的配套分析：超过 1 万亿美元的服务行业将被 AI agent 替代。SaaS 是用软件辅助人类做服务，Services as Software 是 AI 直接替代服务本身。V 的 Arena 如果能做到：用户描述决策场景 → 系统输出多方分析报告（而不是给工具让用户自己调），那价值就不在一个量级上。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">注意力才是稀缺资源</div>
-    <blockquote>盯着一个 AI 干活，一次只干一件事。</blockquote>
-    <div class="author">— <a href="https://x.com/lxfater/status/2038659910943285599" target="_blank" rel="noopener">铁锤人</a></div>
-    <div class="comment"><strong>💭</strong> 人每次切换 Agent 都要重新拾起上下文，这是对精神的消耗。人是逃避痛苦的动物，一感到不适就开始逃避——最舒服的选择就是回答&quot;继续&quot;，然后 AI 跑偏了也不知道。这个朴素的道理比任何 multi-agent 架构设计都重要。</div>
+    <div class="w-title">社区冷启动的核心不是人多，是表演活力</div>
+    <blockquote>The hardest part of community cold start isn&#x27;t getting people in. It&#x27;s performing aliveness until it becomes real.</blockquote>
+    <div class="quote-zh">「社区冷启动最难的部分不是把人拉进来，而是在它真正活起来之前表演活力。」</div>
+    <div class="author">— <a href="https://x.com/yucheng/status/2039116015876161605" target="_blank" rel="noopener">yucheng (YC (Yucheng))</a> &middot; 社区运营专家</div>
+    <div class="comment"><strong>💭</strong> 后面还有一条补充：12 个频道每个死寂，4 个频道让沉默没地方藏。V 做 Arena 的虚拟讨论群有直接借鉴——虚拟群的初始阶段需要足够多的虚拟角色来&#x27;表演&#x27;讨论的活跃度，让真实用户感觉这里有人气。结构越小，第一条消息的门槛越低。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">连续性比速度更珍贵</div>
-    <blockquote>AI 让速度越来越便宜，与此同时，连续性显得越来越珍贵。</blockquote>
-    <div class="author">— <a href="https://x.com/wangray/status/2038694709439430829" target="_blank" rel="noopener">Ray Wang</a></div>
-    <div class="comment"><strong>💭</strong> 从湖南山村修车学徒到估值 10 亿公司，张雪 20 年在推同一堵墙。AI 时代所有人都在追求快，但&quot;快不等于积累，很多快是高频归零&quot;。真正升值的是用户关系、真实反馈、行业理解——那些能层层叠加的能力。</div>
+    <div class="w-title">从字节时代到 token 时代</div>
+    <blockquote>过去六十年，计算机的世界建立在字节上。一个字符 8 个 bit，精确，确定，不会出错。现在 LLM 来了。它的基本单位是 token，不是字节。token 是模糊的，输出是概率性的。这就像从牛顿力学进入量子力学。精确让位于概率，确定让位于统计。Byte ERA → Token ERA。</blockquote>
+    
+    <div class="author">— <a href="https://x.com/oran_ge/status/2039128633995034954" target="_blank" rel="noopener">oran_ge (Orange AI)</a> &middot; 技术博主</div>
+    <div class="comment"><strong>💭</strong> Karpathy 的框架（LLM=CPU, Agent=内核）加上「token 是新的字节」这个延伸，给了一个完整的软件史视角。V 操盘 Arena 这个 agent 框架，本质上就是在 token 时代创造新物种——谁掌握更多 token 谁就赢。</div>
   </div>
 
   <div class="wisdom-card">
-    <div class="w-title">学会两周，精通一生</div>
-    <blockquote>&#x27;You can learn anything in 2 weeks&#x27; only if you realize learning and mastering are two very different things.</blockquote>
-    <div class="author">— <a href="https://x.com/Hesamation/status/2038660814899454430" target="_blank" rel="noopener">ℏεsam</a></div>
-    <div class="comment"><strong>💭</strong> 那个两周只是第一步。真正的精通是迭代过程——填补知识缺口、拓展理解，需要几个月。但第一步确实能超过大多数人。&quot;大多数人高估了精通的门槛，低估了两周死磕的威力。&quot;</div>
-  </div>
-
-  <div class="wisdom-card">
-    <div class="w-title">信任的 Provenance</div>
-    <blockquote>Wikipedia 限制 AI 写作，不是因为 AI 写得不准。是因为 AI 写的东西没有「作者」。</blockquote>
-    <div class="author">— <a href="https://x.com/lyc_zh/status/2038753698860650862" target="_blank" rel="noopener">YC (Yucheng)</a></div>
-    <div class="comment"><strong>💭</strong> 每条 Wikipedia 编辑有人名、时间戳、来源——这条链断了，内容就失去可信度。AI 产品的信任问题本质上是 provenance 问题。这个洞察对任何构建 AI 内容系统的人都是核心挑战。</div>
+    <div class="w-title">最好的 PR 往往是意外的</div>
+    <blockquote>Anthropic 的失误序列：1. 不小心泄露 Claude Code 源码 2. 发现后疯狂 DMCA 3. 有人用 Python 重写，版权失效。现在所有人都在研究 Claude Code 的内部架构，比没泄露之前传播得更广。</blockquote>
+    
+    <div class="author">— <a href="https://x.com/yucheng/status/2039108736334385362" target="_blank" rel="noopener">yucheng (YC (Yucheng))</a> &middot; 社区运营专家</div>
+    <div class="comment"><strong>💭</strong> 信息传播的博弈论：越是想藏的东西，限制越强，传播动力越大。适用于所有产品策略——封锁不如开放。</div>
   </div>
   </div>
 </section>
@@ -817,19 +832,20 @@ footer .brand {
   </div>
   <div class="section-body">
   <div class="chips">
-    <div class="chip"><strong>Harness &gt; Model</strong>能力的瓶颈不在模型，在于如何编排和调度</div>
-    <div class="chip"><strong>并行试错取代选择</strong>AI 时代最优策略是同时跑多个方案再比较</div>
-    <div class="chip"><strong>注意力管理 &gt; Agent 数量</strong>一次盯一个 AI 比同时管十个更高效</div>
-    <div class="chip"><strong>连续性 &gt; 速度</strong>长期可叠加的能力远比短期迭代珍贵</div>
-    <div class="chip"><strong>Provenance 是信任基石</strong>没有来源链的内容将被质疑</div>
+    <div class="chip"><strong>CC 架构解密</strong>7 层记忆 + 三层反蒸馏 + hidden features，工业级 agent 系统设计被掀开了</div>
+    <div class="chip"><strong>Token ERA</strong>Karpathy: LLM=CPU, Agent=内核，从字节时代到 token 时代的范式转移</div>
+    <div class="chip"><strong>Services as Software</strong>万亿美金服务行业被 AI agent 直接替代，不是用软件辅助而是直接替代</div>
+    <div class="chip"><strong>Harness &gt; Model</strong>同一模型不同 harness 性能差 6 倍，框架工程的投资回报率被证实</div>
+    <div class="chip"><strong>视频成本崩盘</strong>Veo 3.1 Lite $0.05/秒，1 分钟视频 $3，AI 视频进入大众实验期</div>
+    <div class="chip"><strong>Agent 记忆工程</strong>CC 七层记忆架构 + Mem0 发现静默删除机制，上下文管理是 agent 真实瓶颈</div>
   </div>
   </div>
 </section>
 
 <footer>
   <div class="brand"></div>
-  2026-03-31 · 03-30 08:02 ~ 03-31 08:00 CST<br>
-  从 629 条推文 中提取
+  2026-04-01 · 03-31 10:24 ~ 04-01 10:24 CST<br>
+  从 658 条推文 中提取
 </footer>
 
 </div>
@@ -844,31 +860,31 @@ footer .brand {
 
   // Data: [label, mentions, engagementScore]
   const raw = [
-    ["AI", 130, 18582],
-    ["Claude", 53, 7727],
-    ["Claude Code", 34, 9872],
-    ["CLI", 23, 50404],
-    ["Agent", 22, 1865],
-    ["API", 19, 9408],
-    ["ChatGPT", 18, 2057],
-    ["Codex", 16, 1984],
-    ["OpenClaw", 16, 3372],
-    ["MCP", 14, 3669],
-    ["LLM", 11, 1336],
-    ["Anthropic", 11, 3467],
-    ["Skill", 11, 1215],
-    ["AGI", 11, 5658],
-    ["BREAKING", 11, 2180],
-    ["AI Agent", 10, 1294],
-    ["Google", 9, 3121],
-    ["Gemini", 9, 1204],
-    ["OpenAI", 9, 1324],
-    ["Slack", 8, 1095],
-    ["OS", 8, 2202],
-    ["UI", 8, 43384],
-    ["Cursor", 7, 3862],
-    ["GB", 7, 1928],
-    ["Grok", 7, 48394],
+    ["AI", 110, 23096],
+    ["Claude Code", 85, 58822],
+    ["Claude", 52, 54808],
+    ["Anthropic", 38, 55610],
+    ["Agent", 23, 3453],
+    ["OpenClaw", 17, 3917],
+    ["Codex", 16, 1213],
+    ["API", 13, 4779],
+    ["OpenAI", 12, 771],
+    ["MCP", 11, 1455],
+    ["CLI", 10, 1012],
+    ["LLM", 10, 2292],
+    ["BREAKING", 9, 367],
+    ["Skill", 8, 329],
+    ["UI", 8, 872],
+    ["Prompt", 6, 76],
+    ["ChatGPT", 6, 2162],
+    ["Grok Imagine", 6, 2697],
+    ["Python", 6, 34322],
+    ["SDK", 6, 559],
+    ["Veo", 6, 195],
+    ["OS", 6, 4281],
+    ["CC", 5, 687],
+    ["GPT", 5, 2260],
+    ["Markdown", 5, 756],
   ];
 
   // Color by engagement: hot(red-pink) → warm(gold) → cool(blue) → muted
@@ -1031,7 +1047,7 @@ footer .brand {
 })();
 
 // ═══ Tweet Data ═══
-const tweetData = {"AI": [["RT @Kasparov63: Novel environments, no precedents or plagiarism possible. Humans 100%, AI &lt;1%.", "fchollet", 0, 203, ""]], "Claude": [["偶然看到一个挺实用的开源项目：Agent Watch，在手表上远程控制 Claude Code。\n\n在用 Claude Code 写代码时，经常遇到权限需要确认，如果我们离开了座位，在健身或走在路上。\n\n有这个项目，就能在手表上实时查看终端输出，遇到权限请求直接点击批准或拒绝。\n\n还能通过语音口述给 Claude 发指令，全程不用碰电脑，还是挺实用的。\n\nGitHub：https://t.co/F", "GitHub_Daily", 0, 0, ""]], "Claude Code": [["偶然看到一个挺实用的开源项目：Agent Watch，在手表上远程控制 Claude Code。\n\n在用 Claude Code 写代码时，经常遇到权限需要确认，如果我们离开了座位，在健身或走在路上。\n\n有这个项目，就能在手表上实时查看终端输出，遇到权限请求直接点击批准或拒绝。\n\n还能通过语音口述给 Claude 发指令，全程不用碰电脑，还是挺实用的。\n\nGitHub：https://t.co/F", "GitHub_Daily", 0, 0, ""]], "CLI": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "Agent": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "API": [["Claude Code刚刚上新了Computer Use功能，能直接操作Mac桌面了\n\nClaude Code现在能在CLI里直接打开应用、点击、打字、看屏幕截图，像人一样操作macOS GUI，不用离开终端就能测试原生应用、调试视觉问题、操作没有API的工具\n\n比如说开发App，以前写完要自己手动打开点一遍看效果，现在可以让Claude自己编译、启动、逐屏截图验证，你只看报告\n\n视觉bug复现，", "aigclink", 0, 1, ""]], "ChatGPT": [["Just landed in Shanghai and both ChatGPT and Claude don’t work (even with my eSIM) but the first ad I saw is for OpenClaw", "petergyang", 445, 20, ""]], "Codex": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "OpenClaw": [["Just landed in Shanghai and both ChatGPT and Claude don’t work (even with my eSIM) but the first ad I saw is for OpenClaw", "petergyang", 445, 20, ""]], "MCP": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "LLM": [["the LLM can be John Carmack or a mashed potato depending on how you intimidate it\n\nhttps://t.co/gWOj1cHGqf", "Hesamation", 1, 0, ""]], "Anthropic": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "Skill": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "AGI": [["1/10 🚀 Qwen3.5-Omni is here! Scaling up to a native omni-modal AGI.\nMeet the next generation of Qwen, designed for native text, image, audio, and video understanding, with major advances in both intel", "Ali_TongyiLab", 1427, 186, ""]], "BREAKING": [["RT @godofprompt: BREAKING: Wisconsin and MIT just proved that every AI coding benchmark is measuring the wrong thing.\n\n&gt; Pass rate stays hi…", "godofprompt", 0, 17, ""]], "AI Agent": [["AI Agent 一周就把你的代码库写成屎山？\n\n问题不在 AI，在于你看不见它正在破坏什么。你只看到终端输出 Modified xxx.ts，看不到 AI 正在创建循环依赖、暴露内部模块、把代码塞错地方。失去架构的空间感知，就失去了控制。\n\nsentrux 是个给 AI Agent 装\"架构传感器\"的开源项目：\n实时扫描代码结构 → 给出质量分 → AI 看到分数 → 改进代码 → 重新扫描 →", "servasyy_ai", 33, 8, ""]], "Google": [["BestBlogs 早报 | 2026-03-31\n\n# Voxtral TTS / Qwen3.5-Omni / ADK for Java\n\n[1] Mistral 发布 Voxtral TTS 语音模型，并展望 Mistral 4\nMistral AI 推出首款语音生成模型 Voxtral TTS，基于 3.8B 参数骨干网络，支持九种语言，质量媲美 ElevenLabs 但成本更低且权重开放", "hongming731", 0, 0, ""]], "Gemini": [["RT @lyc_zh: Google 推出「一键跳槽」功能，让用户把 ChatGPT/Claude 的聊天记录和个人信息直接迁移到 Gemini。\n\n最妙的地方：记忆迁移的机制是让你把 prompt 粘到竞争对手那里，用对方的模型生成你的个人档案，再导入 Gemini。\n\nGo…", "lyc_zh", 0, 2, ""]], "OpenAI": [["OpenAI 刚开源了一个让 Codex 给 Claude Code 打工的插件。\n\n等等，这不就是我三周前开源的 ai-pair 吗？\n\n不过仔细看了下，还是有区别的。它们的版本是\"老板-员工\"模式，Claude 下指令，Codex 执行。我的是\"圆桌会议\"模式，三个 AI 互相审查、互相拆台。\n\n同一篇文章扔进去，Claude 说论证有硬伤，GPT 逐段拆逻辑链，Gemini 在旁边夸大家写得", "AxtonLiu", 1, 0, ""]], "Slack": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "OS": [["We now support GitHub Enterprise Server across our product suite, including Claude Code on the web, iOS, Android and Code Review! \n\nTry it out and let us know your feedback", "_catwu", 51, 4, ""]], "UI": [["Claude Code 新增\"电脑操控（computer use）\"功能：写完代码直接帮你点鼠标测试\n\nAnthropic 给 Claude Code 加了一个新能力：直接操控你的 Mac 桌面。写完代码之后，Claude 可以自己编译、启动应用、点击按钮、截图验证，整个流程不用你碰鼠标。\n\n这个功能叫 computer use，目前是研究预览阶段，仅限 macOS，需要 Pro 或 Max 订阅", "dotey", 87, 15, ""]], "Cursor": [["Recently found cc-connect, a neat way to control local AI agents from any chat app. It bridges Claude Code, Cursor, Gemini CLI, and Codex to Slack, Telegram, Discord, Feishu, and more, so you can run ", "HiTw93", 6, 0, ""]], "GB": [["Playing DOOM in 2026 is honestly boring but at least it lets you instantly play without an hour intro of cut scenes and tutorials and then when you load it a second time downloading a 50GB update for ", "levelsio", 109, 1, ""]], "Grok": [["RT @tetsuoai: Building AgenC: Grok 4.20-Powered Agents Writing Software https://t.co/YRSd0iud3L", "elonmusk", 0, 457, ""]]};
+const tweetData = {"AI": [["第二步是以点带线，以线带面。\n\n从一个具体的功能点入手，看这个功能做什么，这个功能点从输入到输出经过了哪些模块，每个模块的作用是什么，模块的关系是什么样的。\n\n之所以第一步要能跑起来，一方面是你能直观的看到运行结果，另一方面是因为你分析功能点的时候，可以打印日志或者设置断点，这样跑起来的时候能直观看到代码运行的过程。\n\n当然现在借助 AI 分析就容易多了", "dotey", 4, 1, ""]], "Claude Code": [["太炸了。\n\n一位 Anthropic 工程师称，自己因为一次 source map 发布失误，意外公开了 Claude Code 的大量内部架构，随后被解雇 https://t.co/aif91ZsnUr", "FinanceYF5", 3, 0, ""]], "Claude": [["我把最大的几条感悟浓缩一下，句句戳中我自己，也应该能戳中正在刷X的你：\n\n1⃣️80%的内容产出已经等于0分\n所有人都能用AI写出通顺的文章、脚本、朋友圈，那80%就成了地板，大家卷到死也卷不出差价。真正拉开差距的，是那剩下的15–20%——你的独特品味、判断力和“活人感”。\n\n未来的内容只剩两种：纯干货（大模型越来越擅长）和“只有你能说出口的情感/审美”。你有后者吗？\n\n2⃣️别再给AI下“任务", "CryptoJHK", 2, 1, ""]], "Anthropic": [["太炸了。\n\n一位 Anthropic 工程师称，自己因为一次 source map 发布失误，意外公开了 Claude Code 的大量内部架构，随后被解雇 https://t.co/aif91ZsnUr", "FinanceYF5", 3, 0, ""]], "Agent": [["比如说你想了解 Agent Loop，可以打印/收集所有 API 请求，看它请求的Prompt和API返回的结果，这样你就很容易建立对 Agent 如何分析要求如何调用工具有直观的认识。\n\n以前我就是借助claude-trace分析的，可惜后来用不了，现在有代码了可以做类似的事情了\nhttps://t.co/8HaLt7OVUv", "dotey", 0, 0, ""]], "OpenClaw": [["RT @shao__meng: 如果你的 Openclaw 还没有稳定的优质数据爬取搜索方案，可以试试 xcrawl，注册后有 1000 Credits 可以用来测试和前期使用：\n\nhttps://t.co/JytP4uwLZA", "shao__meng", 0, 2, ""]], "Codex": [["这次Claude code的代码泄露意义不是太大\n\nCodex是开源的，还有OpenCode，已经有很多参考。\n\n大一点的厂，懂如何反混淆的人大有人在，删减一下冗余代码，然后AI逆向一下，Claude code也看得差不都。\n\n而且之前已经泄露过一次，也没把握住。\n\n所以呀，底层还是模型问题，模型没变好，其他都是虚的。", "lxfater", 165, 4, ""]], "API": [["SentrySearch：用自然语言搜索视频内容的开源工具\n\n在几个小时的行车记录仪视频里找到\"一辆红色卡车闯了停牌\"那个画面，SentrySearch 能让你像搜文字一样搜视频，输入描述，直接导出对应片段。\n\n这个开源命令行工具的原理并不复杂：把视频切成带重叠的片段，用 Google Gemini Embedding API 或本地的 Qwen3-VL 模型把每个片段编码成向量，存进本地向量数据", "dotey", 58, 18, ""]], "OpenAI": [["RT @godofprompt: 🚨 How it feels knowing Anthropic is now officially more open than OpenAI https://t.co/vaQTCX8f1U", "godofprompt", 0, 2, ""]], "MCP": [["这篇花了10个小时（水都没怎么喝），一点一点分析写的\n\n特地用了一些解释，争取很多小白和刚入门的新手都能多看懂一些（当然很多也是给自己看的）。\n\n当然没写完，很多部分没写，文章中有说，之后会慢慢给大家分析。这么庞大的构架，也不是一时半会能写出来的。\n\n我后续会通过openclaw的机制同步分析，Hook机制，Cron机制，Coordinator 调度，Plugins 系统，Skill机制，MCP构", "servasyy_ai", 5, 1, ""]], "CLI": [["黄总的对claude code CLI的分析，由浅到深，逐层递进，真的很赞，推荐阅读", "zstmfhy", 2, 1, ""]], "LLM": [["RT @omarsar0: NEW Stanford &amp; MIT paper on Model Harnesses.\n\nChanging the harness around a fixed LLM can produce a 6x performance gap on the…", "omarsar0", 0, 41, ""]], "BREAKING": [["RT @rryssf_: 🚨 BREAKING: this BIS report just admitted the global banking system processes trillions in payments every year and has no idea…", "rryssf_", 0, 9, ""]], "Skill": [["SentrySearch：用自然语言搜索视频内容的开源工具\n\n在几个小时的行车记录仪视频里找到\"一辆红色卡车闯了停牌\"那个画面，SentrySearch 能让你像搜文字一样搜视频，输入描述，直接导出对应片段。\n\n这个开源命令行工具的原理并不复杂：把视频切成带重叠的片段，用 Google Gemini Embedding API 或本地的 Qwen3-VL 模型把每个片段编码成向量，存进本地向量数据", "dotey", 58, 18, ""]], "UI": [["Claude Code 7 层分级记忆体系 \n\n来自 @evermind 团队 @troyhua 对源代码的解读，他发现 Claude Code 的分层记忆管理，从亚毫秒级轻量操作到后台“梦境”式长期巩固，每一层都以“最低成本优先”原则设计，后一层仅在必要时触发，从而最大化效率并保护 prompt cache。\n\n- 核心约束与基础\nClaude Code 通过精确的 tokenCountWith", "shao__meng", 2, 1, ""]], "Prompt": [["比如说你想了解 Agent Loop，可以打印/收集所有 API 请求，看它请求的Prompt和API返回的结果，这样你就很容易建立对 Agent 如何分析要求如何调用工具有直观的认识。\n\n以前我就是借助claude-trace分析的，可惜后来用不了，现在有代码了可以做类似的事情了\nhttps://t.co/8HaLt7OVUv", "dotey", 0, 0, ""]], "ChatGPT": [["上周我参加了生财航海家AI大会，两天十几位嘉宾分享，看完一半现场+别人整理的笔记，回来脑子嗡嗡的。\n\n最扎心的点来了：很多人（包括曾经的我）每天花大量时间用ChatGPT写文案、找素材、改方案，但最后还是要自己手动复制、粘贴、排版、发布……\n\nA I 帮AI帮了忙，但你还是那个最累的“搬运工+质检员”。\n\n产出上去了，收入却没跟着指数级起来。\n\n这本质上就是把AI当工具，而不是当能独立干活的“员工", "CryptoJHK", 2, 0, ""]], "Grok Imagine": [["RT @XFreeze: Grok Imagine is just amazing! https://t.co/VtZB0rcn3R", "elonmusk", 0, 153, ""]], "Python": [["Claude Code 团队几位核心产品研发，都还没有对源代码泄露做任何回应，Anthropic 内部可能正在紧急讨论？\n\n与其泄露版本满天飞，有人开源了 Python 移植、有人剥离了 Claude Agent SDK、有人找到了很多彩蛋和内部员工特权代码、还有人在代码中挖出了很多补丁和小秘密。。。\n\n官方不如干脆正式开源，这样开发者们会去跟随官方版本，社区野史版本慢慢就安静下来了。。", "shao__meng", 7, 1, ""]], "SDK": [["Claude Code 团队几位核心产品研发，都还没有对源代码泄露做任何回应，Anthropic 内部可能正在紧急讨论？\n\n与其泄露版本满天飞，有人开源了 Python 移植、有人剥离了 Claude Agent SDK、有人找到了很多彩蛋和内部员工特权代码、还有人在代码中挖出了很多补丁和小秘密。。。\n\n官方不如干脆正式开源，这样开发者们会去跟随官方版本，社区野史版本慢慢就安静下来了。。", "shao__meng", 7, 1, ""]], "Veo": [["兄弟们 好消息 \n\nGoogle 发布 Veo 3.1 Lite\n\n最具性价比的视频模型 $0.05/秒起\n\n720p 起步价不到 Veo 3.1 Fast 的一半，速度一样。\n\n算一笔账：用 Lite 生成一条 8 秒 720p 视频，成本 $0.40。\n\n同样的视频用 Fast 要 $1.20。差了 3 倍。如果跟 Standard 比，差 8 倍。\n\n支持文本生成视频和图片生成视频\n分辨率支", "xiaohu", 32, 2, ""]], "OS": [["字节要被取代了，取代它的是 token。\n\nKarpathy 昨天在推上回了 Python 之父 Guido 一句话：\nLLM = CPU，Agent = 操作系统内核。\n但他补了一个很关键的细节：\n\nLLM 处理的数据单位不是字节，是 token。\n这个操作系统的运行方式不是确定性的，而是统计性的。\n这是一种底层计算的范式转移。\n\n过去六十年，计算机的世界建立在字节上。\n\n一个字符 8 个 bi", "oran_ge", 70, 15, ""]], "CC": [["昨天Claude Code源码泄漏，有人连夜搞了一个Claude Code反封号反追踪工具：cc-gateway\n\nAnthropic会通过640+种遥测事件、40+维度指纹检测异常使用情况，比如设备ID、邮箱、操作系统、硬件配置等，每5秒上报一次\n\nCC Gateway在所有身份指纹出网前全部重写，让Anthropic服务器只能看到一个标准化身份\n\n从HTTP请求体、HTTP头、Prompt注入", "aigclink", 4, 0, ""]], "GPT": [["我把最大的几条感悟浓缩一下，句句戳中我自己，也应该能戳中正在刷X的你：\n\n1⃣️80%的内容产出已经等于0分\n所有人都能用AI写出通顺的文章、脚本、朋友圈，那80%就成了地板，大家卷到死也卷不出差价。真正拉开差距的，是那剩下的15–20%——你的独特品味、判断力和“活人感”。\n\n未来的内容只剩两种：纯干货（大模型越来越擅长）和“只有你能说出口的情感/审美”。你有后者吗？\n\n2⃣️别再给AI下“任务", "CryptoJHK", 2, 1, ""]], "Markdown": [["Claude Code 7 层分级记忆体系 \n\n来自 @evermind 团队 @troyhua 对源代码的解读，他发现 Claude Code 的分层记忆管理，从亚毫秒级轻量操作到后台“梦境”式长期巩固，每一层都以“最低成本优先”原则设计，后一层仅在必要时触发，从而最大化效率并保护 prompt cache。\n\n- 核心约束与基础\nClaude Code 通过精确的 tokenCountWith", "shao__meng", 2, 1, ""]]};
 
 // ═══ Tweet Panel ═══
 function openTweetPanel(keyword) {
